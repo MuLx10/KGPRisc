@@ -112,7 +112,7 @@ module G9Processor(clk);
 
 	assign OpCode = instruction[31:26];//opp
 	
-	ControlUnit CU(OpCode, AluOp,
+	ControlUnit CU(clk, OpCode, AluOp,
 						mem_read,mem_write,alu_src,mem_to_reg,reg_write,
 						b,br,bz,bnz,bcy,bncy,bs,bns,bv,bnv,Call,Ret);
 	
@@ -171,8 +171,8 @@ module G9Processor(clk);
 
 	always @(clk) begin
 		$strobe("%t: AluOp: %b ", $time,AluOp);
-		$strobe("%t: ALUResult  %b  %d ", $time, ALUResult, ALUResult);
-		$strobe("%t: PC_NXT: %b ", $time,pc_next);
+		$strobe("%t: ALUResult  %b  write_data %b ", $time, ALUResult, write_data);
+		$strobe("%t: PC_NXT: %b mem_to_reg %b", $time,pc_next,mem_to_reg);
 	end
 	
 endmodule

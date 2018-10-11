@@ -26,8 +26,8 @@ static const char *ng1 = "%t: rs(%b): %b ";
 static const char *ng2 = "%t: rt(%b): %b ";
 static const char *ng3 = "%t: imm: %b ";
 static const char *ng4 = "%t: AluOp: %b ";
-static const char *ng5 = "%t: ALUResult  %b  %d ";
-static const char *ng6 = "%t: PC_NXT: %b ";
+static const char *ng5 = "%t: ALUResult  %b  write_data %b ";
+static const char *ng6 = "%t: PC_NXT: %b mem_to_reg %b";
 static const char *ng7 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v";
 static unsigned int ng8[] = {31U, 0U};
 static int ng9[] = {0, 0};
@@ -139,7 +139,7 @@ static void Monitor_174_30(char *t0)
 LAB0:    t2 = xsi_vlog_time(t1, 1000.0000000000000, 1000.0000000000000);
     t3 = (t0 + 7008U);
     t4 = *((char **)t3);
-    t3 = (t0 + 7008U);
+    t3 = (t0 + 2848U);
     t5 = *((char **)t3);
     xsi_vlogfile_write(1, 0, 2, ng5, 4, t0, (char)118, t1, 64, (char)118, t4, 32, (char)118, t5, 32);
 
@@ -152,11 +152,14 @@ static void Monitor_175_31(char *t0)
     char *t2;
     char *t3;
     char *t4;
+    char *t5;
 
 LAB0:    t2 = xsi_vlog_time(t1, 1000.0000000000000, 1000.0000000000000);
     t3 = (t0 + 4128U);
     t4 = *((char **)t3);
-    xsi_vlogfile_write(1, 0, 2, ng6, 3, t0, (char)118, t1, 64, (char)118, t4, 32);
+    t3 = (t0 + 8448U);
+    t5 = *((char **)t3);
+    xsi_vlogfile_write(1, 0, 2, ng6, 4, t0, (char)118, t1, 64, (char)118, t4, 32, (char)118, t5, 1);
 
 LAB1:    return;
 }
@@ -4294,9 +4297,9 @@ LAB1:    return;
 }
 
 
-extern void work_m_12466505639657975796_0093123207_init()
+extern void work_m_12466505639658011733_0093123207_init()
 {
 	static char *pe[] = {(void *)NetDecl_23_0,(void *)NetDecl_57_1,(void *)NetDecl_57_2,(void *)Cont_81_3,(void *)Cont_82_4,(void *)Cont_83_5,(void *)Cont_85_6,(void *)Always_104_7,(void *)Cont_113_12,(void *)Cont_120_13,(void *)Cont_133_14,(void *)Cont_134_15,(void *)Cont_136_16,(void *)Cont_137_17,(void *)Cont_139_18,(void *)Cont_140_19,(void *)Cont_142_20,(void *)Cont_143_21,(void *)Cont_145_22,(void *)Cont_146_23,(void *)Cont_148_24,(void *)Cont_149_25,(void *)Cont_151_26,(void *)Cont_170_27,(void *)Always_172_28,(void *)implSig1_execute};
-	xsi_register_didat("work_m_12466505639657975796_0093123207", "isim/G9_TB_isim_beh.exe.sim/work/m_12466505639657975796_0093123207.didat");
+	xsi_register_didat("work_m_12466505639658011733_0093123207", "isim/G9_TB_isim_beh.exe.sim/work/m_12466505639658011733_0093123207.didat");
 	xsi_register_executes(pe);
 }

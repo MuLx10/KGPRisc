@@ -107,7 +107,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "../G9Processor/ControlUnit.v" in library work
+Compiling verilog file "ControlUnit.v" in library work
 Module <ControlUnit> compiled
 No errors in compilation
 Analysis of file <"ControlUnit.prj"> succeeded.
@@ -133,14 +133,36 @@ Module <ControlUnit> is correct for synthesis.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <ControlUnit>.
-    Related source file is "../G9Processor/ControlUnit.v".
+    Related source file is "ControlUnit.v".
+    Found 1-bit register for signal <Call>.
+    Found 1-bit register for signal <Ret>.
+    Found 3-bit register for signal <alu_op>.
+    Found 1-bit register for signal <alu_src>.
+    Found 1-bit register for signal <b>.
+    Found 1-bit register for signal <bcy>.
+    Found 1-bit register for signal <bncy>.
+    Found 1-bit register for signal <bns>.
+    Found 1-bit register for signal <bnv>.
+    Found 1-bit register for signal <bnz>.
+    Found 1-bit register for signal <br>.
+    Found 1-bit register for signal <bs>.
+    Found 1-bit register for signal <bv>.
+    Found 1-bit register for signal <bz>.
+    Found 1-bit register for signal <mem_read>.
+    Found 1-bit register for signal <mem_write>.
+    Summary:
+	inferred  18 D-type flip-flop(s).
 Unit <ControlUnit> synthesized.
 
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 16
+ 1-bit register                                        : 15
+ 3-bit register                                        : 1
+
 =========================================================================
 
 =========================================================================
@@ -151,7 +173,10 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+
 =========================================================================
 
 =========================================================================
@@ -169,7 +194,10 @@ Final Macro Processing ...
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+
 =========================================================================
 
 =========================================================================
@@ -194,15 +222,19 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 26
+# IOs                              : 27
 
 Cell Usage :
-# BELS                             : 34
+# BELS                             : 33
 #      GND                         : 1
-#      LUT2                        : 5
-#      LUT3                        : 2
-#      LUT4                        : 25
-#      MUXF5                       : 1
+#      LUT3                        : 16
+#      LUT4                        : 9
+#      MUXF5                       : 6
+#      VCC                         : 1
+# FlipFlops/Latches                : 18
+#      FDR                         : 18
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
 # IO Buffers                       : 26
 #      IBUF                        : 6
 #      OBUF                        : 20
@@ -213,10 +245,12 @@ Device utilization summary:
 
 Selected Device : 3s400pq208-5 
 
- Number of Slices:                       19  out of   3584     0%  
- Number of 4 input LUTs:                 32  out of   7168     0%  
- Number of IOs:                          26
- Number of bonded IOBs:                  26  out of    141    18%  
+ Number of Slices:                       15  out of   3584     0%  
+ Number of 4 input LUTs:                 25  out of   7168     0%  
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of    141    19%  
+    IOB Flip Flops:                      18
+ Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -236,7 +270,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 18    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -247,45 +285,64 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 10.788ns
+   Minimum input arrival time before clock: 4.182ns
+   Maximum output required time after clock: 6.216ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 138 / 20
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 123 / 36
 -------------------------------------------------------------------------
-Delay:               10.788ns (Levels of Logic = 5)
-  Source:            opcode<1> (PAD)
-  Destination:       alu_op<1> (PAD)
+Offset:              4.182ns (Levels of Logic = 3)
+  Source:            opcode<4> (PAD)
+  Destination:       Ret (FF)
+  Destination Clock: clk rising
 
-  Data Path: opcode<1> to alu_op<1>
+  Data Path: opcode<4> to Ret
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             8   0.715   1.216  opcode_1_IBUF (opcode_1_IBUF)
-     LUT3:I0->O            8   0.479   1.091  alu_op<1>21 (N6)
-     LUT4:I1->O            1   0.479   0.740  alu_op<1>_SW1 (N32)
-     LUT4:I2->O            1   0.479   0.681  alu_op<1> (alu_op_1_OBUF)
-     OBUF:I->O                 4.909          alu_op_1_OBUF (alu_op<1>)
+     IBUF:I->O            10   0.715   1.259  opcode_4_IBUF (opcode_4_IBUF)
+     LUT3:I0->O            4   0.479   1.074  Call_cmp_eq000011 (N1)
+     LUT3:I0->O            1   0.479   0.000  Ret_cmp_eq00001 (Ret_mux0000_norst)
+     FDR:D                     0.176          Ret
     ----------------------------------------
-    Total                     10.788ns (7.061ns logic, 3.727ns route)
-                                       (65.5% logic, 34.5% route)
+    Total                      4.182ns (1.849ns logic, 2.333ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            bns (FF)
+  Destination:       bns (PAD)
+  Source Clock:      clk rising
+
+  Data Path: bns to bns
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.626   0.681  bns (bns_OBUF)
+     OBUF:I->O                 4.909          bns_OBUF (bns)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.67 secs
+Total CPU time to Xst completion: 5.66 secs
  
 --> 
 
 
-Total memory usage is 511564 kilobytes
+Total memory usage is 512284 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

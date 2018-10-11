@@ -36,7 +36,7 @@ module G9_TB;
 
 	initial begin
 		// Initialize Inputs
-		clk = 0;
+		clk = 1;
 
 		// Wait 100 ns for global reset to finish
 		#100;
@@ -48,13 +48,7 @@ module G9_TB;
 	begin
 	   #100;
 		clk = ~clk;
-		#100;
-		clk = ~clk;
-		#100;
-		clk = ~clk;
-		#100;
-		clk = ~clk;
-		#100;
+
 	end
       
 endmodule

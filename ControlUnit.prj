@@ -1,1 +1,1 @@
-verilog work "../G9Processor/ControlUnit.v"
+verilog work "ControlUnit.v"

@@ -47,6 +47,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ControlUnit.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ControlUnit.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ControlUnit.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ControlUnit_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ControlUnit_xst.xrpt"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="DMem_TB_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="G9_TB_beh.prj"/>
@@ -82,7 +83,7 @@
     <transform xil_pn:end_ts="1539235246" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1539235246">
       <status xil_pn:value="SuccessfullyRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539236517" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539236517">
+    <transform xil_pn:end_ts="1539237841" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539237841">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU_TB.v"/>
@@ -100,11 +101,11 @@
       <outfile xil_pn:name="RegisterFile.v"/>
       <outfile xil_pn:name="SignExtend.v"/>
     </transform>
-    <transform xil_pn:end_ts="1539235507" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2884325570970878292" xil_pn:start_ts="1539235507">
+    <transform xil_pn:end_ts="1539237851" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2884325570970878292" xil_pn:start_ts="1539237851">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539235507" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-609060803662375324" xil_pn:start_ts="1539235507">
+    <transform xil_pn:end_ts="1539237851" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-609060803662375324" xil_pn:start_ts="1539237851">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -112,7 +113,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539236517" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539236517">
+    <transform xil_pn:end_ts="1539237841" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539237841">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU_TB.v"/>
@@ -130,7 +131,7 @@
       <outfile xil_pn:name="RegisterFile.v"/>
       <outfile xil_pn:name="SignExtend.v"/>
     </transform>
-    <transform xil_pn:end_ts="1539236520" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539236517">
+    <transform xil_pn:end_ts="1539237854" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539237851">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -142,7 +143,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1539236520" xil_pn:in_ck="6491873480964284749" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539236520">
+    <transform xil_pn:end_ts="1539237854" xil_pn:in_ck="6712199286252248317" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539237854">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="G9_TB_isim_beh.wdb"/>
