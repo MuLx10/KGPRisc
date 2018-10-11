@@ -110,7 +110,6 @@ module ControlUnit(
 					begin
 						 alu_src = 1;
 						 mem_to_reg = 1;
-						 reg_write = 1'b1;
 						 mem_read = 1;  
 					end
 	 `SW:  

@@ -22,7 +22,7 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "%t: DMEM3: %b ";
-static unsigned int ng1[] = {3U, 0U};
+static unsigned int ng1[] = {5U, 0U};
 static const char *ng2 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/DataMemory.v";
 static int ng3[] = {0, 0};
 static unsigned int ng4[] = {0U, 0U};

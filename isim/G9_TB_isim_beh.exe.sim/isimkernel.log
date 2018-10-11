@@ -1,10 +1,29 @@
 Command line:
    G9_TB_isim_beh.exe
      -simmode  gui
-     -simrunnum  0
-     -socket  37795
+     -simrunnum  1
+     -socket  42675
 
-Thu Oct 11 16:34:03 2018
+Thu Oct 11 16:55:27 2018
 
 
  Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 197.64 Meg
+
+ Total Signals          : 99
+ Total Nets             : 953
+ Total Signal Drivers   : 63
+ Total Blocks           : 10
+ Total Primitive Blocks : 8
+ Total Processes        : 78
+ Total Traceable Variables  : 64
+ Total Scalar Nets and Variables : 4834
+Total Line Count : 238
+
+ Total Simulation Time: 0.04 sec
+
+ Current Memory Usage: 273.142 Meg
+
+Thu Oct 11 16:56:12 2018
+

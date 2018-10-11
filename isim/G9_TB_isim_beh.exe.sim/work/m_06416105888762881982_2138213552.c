@@ -25,10 +25,10 @@ static const char *ng0 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/C
 static int ng1[] = {0, 0};
 static unsigned int ng2[] = {0U, 0U};
 static int ng3[] = {1, 0};
-static unsigned int ng4[] = {608370689U, 0U};
-static unsigned int ng5[] = {541130753U, 0U};
+static unsigned int ng4[] = {608370691U, 0U};
+static unsigned int ng5[] = {541130755U, 0U};
 static int ng6[] = {2, 0};
-static unsigned int ng7[] = {4259841U, 0U};
+static unsigned int ng7[] = {4259843U, 0U};
 static int ng8[] = {3, 0};
 
 

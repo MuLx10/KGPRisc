@@ -29,7 +29,7 @@ module G9Processor(clk);
 	
 	wire [RegFileSize-1:0] read_reg_1;
 	wire [RegFileSize-1:0] read_reg_2;
-	wire [RegFileSize-1:0] write_register;
+	wire [RegFileSize-1:0] write_register; wire [RegFileSize-1:0] write_registeri;
 	wire [size-1:0] write_data;wire [size-1:0]write_datai;
 	wire [size-1:0] reg_read_data_1;
 	wire [size-1:0] reg_read_data_2;
@@ -100,10 +100,12 @@ module G9Processor(clk);
 						
 	assign read_reg_1 = (Ret) ? RA : instruction[25:21];//rs
    assign read_reg_2 = instruction[20:16];//rt
-	assign write_register = (Call)? RA : instruction[25:21];//rs<-rs,rt
+	
+	assign write_registeri = (Call)? RA : instruction[25:21];//rs<-rs,rt
+	assign write_register = (mem_to_reg)? read_reg_2:write_registeri;
 	
 	RegisterFile RF(.clk(clk),
-						 .reg_write(reg_write|Call),
+						 .reg_write(reg_write|Call|mem_to_reg),
 						 .read_reg_1(read_reg_1),.read_reg_2(read_reg_2),
 						 .write_register(write_register),
 						 .write_data(write_data),
@@ -180,8 +182,8 @@ module G9Processor(clk);
 		$strobe("%t: rs(%b): %b ", $time,read_reg_1,reg_read_data_1);
 		$strobe("%t: rt(%b): %b ", $time,read_reg_2,reg_read_data_2);
 		$strobe("%t: AluOp: %b ", $time,AluOp);
-		$strobe("%t: ALUResult  %b write_data %b ", $time, ALUResult,write_data);
-		$strobe("%t: PC_NXT: %b  ", $time,pc_next);
+		$strobe("%t: ALUResult  %b ", $time, ALUResult);
+		$strobe("%t: PC_NXT: %b  \n", $time,pc_next);
 	 end
 	
 endmodule
