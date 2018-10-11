@@ -14,15 +14,10 @@ Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA
 Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v" Line 77: Size mismatch in connection of port <addra>. Formal port size is 5-bit while actual signal size is 32-bit.
 Completed static elaboration
-Fuse Memory Usage: 96916 KB
-Fuse CPU Usage: 1840 ms
+Fuse Memory Usage: 95616 KB
+Fuse CPU Usage: 1720 ms
 Compiling module ProgramCounter
-Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
-Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
-Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
-Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
 Compiling module InstructionMemory
 Compiling module SignExtend
 Compiling module RegisterFile
@@ -33,9 +28,9 @@ Compiling module G9Processor
 Compiling module G9_TB
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 7 sub-compilation(s) to finish...
-Compiled 14 Verilog Units
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 10 Verilog Units
 Built simulation executable /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_isim_beh.exe
-Fuse Memory Usage: 660468 KB
-Fuse CPU Usage: 1980 ms
-GCC CPU Usage: 3200 ms
+Fuse Memory Usage: 656136 KB
+Fuse CPU Usage: 1780 ms
+GCC CPU Usage: 1810 ms

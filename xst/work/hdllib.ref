@@ -1,2 +1,3 @@
 MO ControlUnit NULL ../G9Processor/ControlUnit.v vlg71/_control_unit.bin 1539235336
+MO InstructionMemory NULL InstructionMemory.v vlg63/_instruction_memory.bin 1539236337
 MO ArithmeticLogicUnit NULL ../G9Processor/ArithmeticLogicUnit.v vlg60/_arithmetic_logic_unit.bin 1539235232

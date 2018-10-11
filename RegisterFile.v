@@ -47,12 +47,10 @@ module RegisterFile(clk,
 	 end
 	 always @(clk) 
 	 begin
+		read_data_2 = RF[read_reg_2];
+	   read_data_1 = RF[read_reg_1];
 		if(reg_write) 
-		begin
 		   RF[write_register] = write_data;
-		end
-	  read_data_2 = RF[read_reg_2];
-	  read_data_1 = RF[read_reg_1];
 	  
 	   $strobe("%t: Write_reg %b Write Data %b", $time, reg_write, write_data);
 		$strobe("%t: Read Values1 RF(%d)  %b ", $time, read_reg_1, RF[read_reg_1]);
