@@ -23,12 +23,13 @@
 #endif
 static const char *ng0 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/InstructionMemory.v";
 static int ng1[] = {0, 0};
-static unsigned int ng2[] = {4128768U, 0U};
+static unsigned int ng2[] = {0U, 0U};
 static int ng3[] = {1, 0};
-static unsigned int ng4[] = {2015297536U, 0U};
-static unsigned int ng5[] = {1U, 0U};
-static unsigned int ng6[] = {2082406400U, 0U};
-static int ng7[] = {4, 0};
+static unsigned int ng4[] = {941817856U, 0U};
+static unsigned int ng5[] = {807403523U, 0U};
+static int ng6[] = {2, 0};
+static unsigned int ng7[] = {874512387U, 0U};
+static int ng8[] = {3, 0};
 
 
 
@@ -94,7 +95,7 @@ LAB3:    t1 = (t0 + 2520);
     if (t11 > 0)
         goto LAB4;
 
-LAB5:    xsi_set_current_line(34, ng0);
+LAB5:    xsi_set_current_line(35, ng0);
     t1 = ((char*)((ng4)));
     t2 = (t0 + 2360);
     t3 = (t0 + 2360);
@@ -103,8 +104,8 @@ LAB5:    xsi_set_current_line(34, ng0);
     t12 = (t0 + 2360);
     t13 = (t12 + 64U);
     t16 = *((char **)t13);
-    t17 = ((char*)((ng5)));
-    xsi_vlog_generic_convert_array_indices(t6, t14, t5, t16, 2, 1, t17, 1, 2);
+    t17 = ((char*)((ng3)));
+    xsi_vlog_generic_convert_array_indices(t6, t14, t5, t16, 2, 1, t17, 32, 1);
     t18 = (t6 + 4);
     t7 = *((unsigned int *)t18);
     t27 = (!(t7));
@@ -115,8 +116,8 @@ LAB5:    xsi_set_current_line(34, ng0);
     if (t31 == 1)
         goto LAB8;
 
-LAB9:    xsi_set_current_line(35, ng0);
-    t1 = ((char*)((ng6)));
+LAB9:    xsi_set_current_line(36, ng0);
+    t1 = ((char*)((ng5)));
     t2 = (t0 + 2360);
     t3 = (t0 + 2360);
     t4 = (t3 + 72U);
@@ -124,7 +125,7 @@ LAB9:    xsi_set_current_line(35, ng0);
     t12 = (t0 + 2360);
     t13 = (t12 + 64U);
     t16 = *((char **)t13);
-    t17 = ((char*)((ng7)));
+    t17 = ((char*)((ng6)));
     xsi_vlog_generic_convert_array_indices(t6, t14, t5, t16, 2, 1, t17, 32, 1);
     t18 = (t6 + 4);
     t7 = *((unsigned int *)t18);
@@ -136,7 +137,28 @@ LAB9:    xsi_set_current_line(35, ng0);
     if (t31 == 1)
         goto LAB10;
 
-LAB11:
+LAB11:    xsi_set_current_line(37, ng0);
+    t1 = ((char*)((ng7)));
+    t2 = (t0 + 2360);
+    t3 = (t0 + 2360);
+    t4 = (t3 + 72U);
+    t5 = *((char **)t4);
+    t12 = (t0 + 2360);
+    t13 = (t12 + 64U);
+    t16 = *((char **)t13);
+    t17 = ((char*)((ng8)));
+    xsi_vlog_generic_convert_array_indices(t6, t14, t5, t16, 2, 1, t17, 32, 1);
+    t18 = (t6 + 4);
+    t7 = *((unsigned int *)t18);
+    t27 = (!(t7));
+    t19 = (t14 + 4);
+    t8 = *((unsigned int *)t19);
+    t30 = (!(t8));
+    t31 = (t27 && t30);
+    if (t31 == 1)
+        goto LAB12;
+
+LAB13:
 LAB1:    return;
 LAB4:    xsi_set_current_line(33, ng0);
     t12 = ((char*)((ng2)));
@@ -193,9 +215,16 @@ LAB10:    t9 = *((unsigned int *)t6);
     xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t14), t35);
     goto LAB11;
 
+LAB12:    t9 = *((unsigned int *)t6);
+    t10 = *((unsigned int *)t14);
+    t34 = (t9 - t10);
+    t35 = (t34 + 1);
+    xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t14), t35);
+    goto LAB13;
+
 }
 
-static void Always_38_1(char *t0)
+static void Always_44_1(char *t0)
 {
     char t7[8];
     char *t1;
@@ -220,7 +249,7 @@ LAB0:    t1 = (t0 + 3680U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(38, ng0);
+LAB2:    xsi_set_current_line(44, ng0);
     t2 = (t0 + 4000);
     *((int *)t2) = 1;
     t3 = (t0 + 3712);
@@ -228,9 +257,9 @@ LAB2:    xsi_set_current_line(38, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(39, ng0);
+LAB4:    xsi_set_current_line(45, ng0);
 
-LAB5:    xsi_set_current_line(40, ng0);
+LAB5:    xsi_set_current_line(46, ng0);
     t4 = (t0 + 2360);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -252,7 +281,7 @@ LAB5:    xsi_set_current_line(40, ng0);
 
 extern void work_m_06416105888762881982_2138213552_init()
 {
-	static char *pe[] = {(void *)Initial_29_0,(void *)Always_38_1};
+	static char *pe[] = {(void *)Initial_29_0,(void *)Always_44_1};
 	xsi_register_didat("work_m_06416105888762881982_2138213552", "isim/G9_TB_isim_beh.exe.sim/work/m_06416105888762881982_2138213552.didat");
 	xsi_register_executes(pe);
 }
