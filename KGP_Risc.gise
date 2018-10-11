@@ -72,10 +72,9 @@
     <transform xil_pn:end_ts="1539235246" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1539235246">
       <status xil_pn:value="SuccessfullyRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539235611" xil_pn:in_ck="-5310501889913649403" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539235611">
+    <transform xil_pn:end_ts="1539235728" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539235728">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="../G9Processor/PC_TB.v"/>
       <outfile xil_pn:name="ALU_TB.v"/>
       <outfile xil_pn:name="ArithmeticLogicUnit.v"/>
       <outfile xil_pn:name="CU_TB.v"/>
@@ -86,6 +85,7 @@
       <outfile xil_pn:name="G9_TB.v"/>
       <outfile xil_pn:name="IMem_TB.v"/>
       <outfile xil_pn:name="InstructionMemory.v"/>
+      <outfile xil_pn:name="PC_TB.v"/>
       <outfile xil_pn:name="ProgramCounter.v"/>
       <outfile xil_pn:name="RegisterFile.v"/>
       <outfile xil_pn:name="SignExtend.v"/>
@@ -102,10 +102,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539235611" xil_pn:in_ck="-5310501889913649403" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539235611">
+    <transform xil_pn:end_ts="1539235728" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539235728">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="../G9Processor/PC_TB.v"/>
       <outfile xil_pn:name="ALU_TB.v"/>
       <outfile xil_pn:name="ArithmeticLogicUnit.v"/>
       <outfile xil_pn:name="CU_TB.v"/>
@@ -116,11 +115,12 @@
       <outfile xil_pn:name="G9_TB.v"/>
       <outfile xil_pn:name="IMem_TB.v"/>
       <outfile xil_pn:name="InstructionMemory.v"/>
+      <outfile xil_pn:name="PC_TB.v"/>
       <outfile xil_pn:name="ProgramCounter.v"/>
       <outfile xil_pn:name="RegisterFile.v"/>
       <outfile xil_pn:name="SignExtend.v"/>
     </transform>
-    <transform xil_pn:end_ts="1539235615" xil_pn:in_ck="-5310501889913649403" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539235611">
+    <transform xil_pn:end_ts="1539235731" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539235728">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -132,7 +132,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1539235615" xil_pn:in_ck="6491873480964284749" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539235615">
+    <transform xil_pn:end_ts="1539235732" xil_pn:in_ck="6491873480964284749" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539235731">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="G9_TB_isim_beh.wdb"/>

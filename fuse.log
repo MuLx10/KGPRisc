@@ -17,7 +17,7 @@ Starting static elaboration
 WARNING:HDLCompiler:189 - "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v" Line 77: Size mismatch in connection of port <addra>. Formal port size is 5-bit while actual signal size is 32-bit.
 Completed static elaboration
 Fuse Memory Usage: 96916 KB
-Fuse CPU Usage: 1680 ms
+Fuse CPU Usage: 1840 ms
 Compiling module ProgramCounter
 Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
 Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
@@ -33,9 +33,9 @@ Compiling module G9Processor
 Compiling module G9_TB
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 5 sub-compilation(s) to finish...
+Waiting for 7 sub-compilation(s) to finish...
 Compiled 14 Verilog Units
 Built simulation executable /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_isim_beh.exe
 Fuse Memory Usage: 660468 KB
-Fuse CPU Usage: 1820 ms
+Fuse CPU Usage: 1980 ms
 GCC CPU Usage: 3200 ms
