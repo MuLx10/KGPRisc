@@ -25,10 +25,10 @@ static const char *ng0 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/C
 static int ng1[] = {0, 0};
 static unsigned int ng2[] = {0U, 0U};
 static int ng3[] = {1, 0};
-static unsigned int ng4[] = {941817856U, 0U};
-static unsigned int ng5[] = {807403523U, 0U};
+static unsigned int ng4[] = {608370689U, 0U};
+static unsigned int ng5[] = {541130753U, 0U};
 static int ng6[] = {2, 0};
-static unsigned int ng7[] = {874512387U, 0U};
+static unsigned int ng7[] = {4259841U, 0U};
 static int ng8[] = {3, 0};
 
 
@@ -224,7 +224,7 @@ LAB12:    t9 = *((unsigned int *)t6);
 
 }
 
-static void Always_44_1(char *t0)
+static void Always_47_1(char *t0)
 {
     char t7[8];
     char *t1;
@@ -249,7 +249,7 @@ LAB0:    t1 = (t0 + 3680U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(44, ng0);
+LAB2:    xsi_set_current_line(47, ng0);
     t2 = (t0 + 4000);
     *((int *)t2) = 1;
     t3 = (t0 + 3712);
@@ -257,9 +257,9 @@ LAB2:    xsi_set_current_line(44, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(45, ng0);
+LAB4:    xsi_set_current_line(48, ng0);
 
-LAB5:    xsi_set_current_line(46, ng0);
+LAB5:    xsi_set_current_line(49, ng0);
     t4 = (t0 + 2360);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -281,7 +281,7 @@ LAB5:    xsi_set_current_line(46, ng0);
 
 extern void work_m_06416105888762881982_2138213552_init()
 {
-	static char *pe[] = {(void *)Initial_29_0,(void *)Always_44_1};
+	static char *pe[] = {(void *)Initial_29_0,(void *)Always_47_1};
 	xsi_register_didat("work_m_06416105888762881982_2138213552", "isim/G9_TB_isim_beh.exe.sim/work/m_06416105888762881982_2138213552.didat");
 	xsi_register_executes(pe);
 }

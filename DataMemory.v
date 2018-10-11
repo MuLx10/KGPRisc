@@ -34,7 +34,7 @@ module DataMemory(clk,address,mem_write,mem_read,write_data,read_data);
 	   //	The D-Memory is initially loaded
 		//$readmemb ("DMem.data", Imem);
 		 for(i=0; i<MemSize; i=i+1)
-            DMem[i] = i; 
+            DMem[i] = 32'd0; 
 	end
 	
 	always @(clk) 
@@ -43,5 +43,6 @@ module DataMemory(clk,address,mem_write,mem_read,write_data,read_data);
 			read_data = DMem[address];	
 		if (mem_write)	
 			DMem[address] = write_data;
+		$strobe("%t: DMEM3: %b ", $time,DMem[32'b00000000000000000000000000000011]);
 	end
 endmodule

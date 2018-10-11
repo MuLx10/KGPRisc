@@ -309,6 +309,6 @@ LAB12:    t29 = *((unsigned int *)t14);
 extern void work_m_16853334319368159758_2461264495_init()
 {
 	static char *pe[] = {(void *)Initial_32_0,(void *)Always_40_1};
-	xsi_register_didat("work_m_16853334319368159758_2461264495", "isim/G9_TB_isim_beh.exe.sim/work/m_16853334319368159758_2461264495.didat");
+	xsi_register_didat("work_m_16853334319368159758_2461264495", "isim/DMem_TB_isim_beh.exe.sim/work/m_16853334319368159758_2461264495.didat");
 	xsi_register_executes(pe);
 }

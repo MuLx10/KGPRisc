@@ -165,10 +165,10 @@ module G9Processor(clk);
 	 	
 	 DataMemory DMem (
 		.clk(clk), 
-		.address(ALUResult), 
+		.address(ALUResult), // imm +(rs)
 		.mem_write(mem_write), 
 		.mem_read(mem_read), 
-		.write_data(reg_read_data_2), //rt
+		.write_data(reg_read_data_2), //(rt)
 		.read_data(read_data)
 	 );
 	 assign write_datai = (mem_to_reg == 1)?  read_data: ALUResult;
@@ -180,8 +180,8 @@ module G9Processor(clk);
 		$strobe("%t: rs(%b): %b ", $time,read_reg_1,reg_read_data_1);
 		$strobe("%t: rt(%b): %b ", $time,read_reg_2,reg_read_data_2);
 		$strobe("%t: AluOp: %b ", $time,AluOp);
-		$strobe("%t: ALUResult  %b  ", $time, ALUResult);
-		$strobe("%t: PC_NXT: %b Ret %b ", $time,pc_next,Ret);
+		$strobe("%t: ALUResult  %b write_data %b ", $time, ALUResult,write_data);
+		$strobe("%t: PC_NXT: %b  ", $time,pc_next);
 	 end
 	
 endmodule

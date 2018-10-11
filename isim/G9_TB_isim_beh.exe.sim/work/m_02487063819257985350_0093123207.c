@@ -26,8 +26,8 @@ static const char *ng1 = "%t: IMem :%b   ";
 static const char *ng2 = "%t: rs(%b): %b ";
 static const char *ng3 = "%t: rt(%b): %b ";
 static const char *ng4 = "%t: AluOp: %b ";
-static const char *ng5 = "%t: ALUResult  %b  ";
-static const char *ng6 = "%t: PC_NXT: %b Ret %b ";
+static const char *ng5 = "%t: ALUResult  %b write_data %b ";
+static const char *ng6 = "%t: PC_NXT: %b  ";
 static const char *ng7 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v";
 static unsigned int ng8[] = {31U, 0U};
 static int ng9[] = {0, 0};
@@ -131,11 +131,14 @@ static void Monitor_183_31(char *t0)
     char *t2;
     char *t3;
     char *t4;
+    char *t5;
 
 LAB0:    t2 = xsi_vlog_time(t1, 1000.0000000000000, 1000.0000000000000);
     t3 = (t0 + 7168U);
     t4 = *((char **)t3);
-    xsi_vlogfile_write(1, 0, 2, ng5, 3, t0, (char)118, t1, 64, (char)118, t4, 32);
+    t3 = (t0 + 2848U);
+    t5 = *((char **)t3);
+    xsi_vlogfile_write(1, 0, 2, ng5, 4, t0, (char)118, t1, 64, (char)118, t4, 32, (char)118, t5, 32);
 
 LAB1:    return;
 }
@@ -146,14 +149,11 @@ static void Monitor_184_32(char *t0)
     char *t2;
     char *t3;
     char *t4;
-    char *t5;
 
 LAB0:    t2 = xsi_vlog_time(t1, 1000.0000000000000, 1000.0000000000000);
     t3 = (t0 + 4288U);
     t4 = *((char **)t3);
-    t3 = (t0 + 10688U);
-    t5 = *((char **)t3);
-    xsi_vlogfile_write(1, 0, 2, ng6, 4, t0, (char)118, t1, 64, (char)118, t4, 32, (char)118, t5, 1);
+    xsi_vlogfile_write(1, 0, 2, ng6, 3, t0, (char)118, t1, 64, (char)118, t4, 32);
 
 LAB1:    return;
 }

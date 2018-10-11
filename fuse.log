@@ -16,7 +16,7 @@ Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into li
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 95616 KB
-Fuse CPU Usage: 1700 ms
+Fuse CPU Usage: 1720 ms
 Compiling module ProgramCounter
 Compiling module InstructionMemory
 Compiling module SignExtend
@@ -31,6 +31,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 3 sub-compilation(s) to finish...
 Compiled 10 Verilog Units
 Built simulation executable /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_isim_beh.exe
-Fuse Memory Usage: 656132 KB
-Fuse CPU Usage: 1770 ms
-GCC CPU Usage: 1800 ms
+Fuse Memory Usage: 656136 KB
+Fuse CPU Usage: 1800 ms
+GCC CPU Usage: 1850 ms
