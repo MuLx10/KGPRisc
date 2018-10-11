@@ -120,8 +120,8 @@ module ArithmeticLogicUnit(
 		else
 			signflag = 0;
 	end
-	always @(*) begin
+	/*always @(*) begin
 		$strobe("%t: ALUResult  %b  %d ", $time, ALUResult, ALUResult);
 		$strobe("%t: ALUOP  %b  %d ", $time, alu_control, alu_control);
-	end
+	end*/
  endmodule

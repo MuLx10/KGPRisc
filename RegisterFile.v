@@ -43,18 +43,16 @@ module RegisterFile(clk,
 	 //reg [2:0] i;
 	 initial begin
 	  for(i=0;i<size;i=i+1)
-			RF[i] <= i;
+			RF[i] = i;
 	 end
-	 always @(negedge clk)
+	 always @(clk)
 	 begin
 		if(reg_write) 
 		   RF[write_register] = write_data;
-		//$strobe("%t: Write_reg %b Write Data %b", $time, reg_write, write_data);
+		//$strobe("%t: Write_reg %b Write Data %b", $time, reg_write, RF[write_register]);
 	 end
  	 assign read_data_2 = RF[read_reg_2];
 	 assign read_data_1 = RF[read_reg_1];
 		//$strobe("%t: Read Values1 RF(%d)  %b ", $time, read_reg_1, read_data_1);
 		//$strobe("%t: Read Values2 RF(%d)  %b ", $time, read_reg_2, read_data_2);
-	
-
 endmodule

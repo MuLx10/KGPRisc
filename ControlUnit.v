@@ -60,22 +60,14 @@
 
 
 module ControlUnit(
-      input clk,
       input[5:0] opcode,
       output reg[2:0] alu_op,
       output reg mem_read,mem_write,alu_src,mem_to_reg,reg_write,
 			b,br,bz,bnz,bcy,bncy,bs,bns,bv,bnv,Call,Ret);
-	always @(negedge clk)
-	begin	
-	mem_to_reg = 1'b0;mem_to_reg = 1'b0;
-	case(opcode)
-		`LW : mem_to_reg = 1'b1;
-		default:reg_write = 1'b1;
-	endcase
-	end
-	always @(posedge clk)
+
+	always @(*)
 	begin
-	 mem_read=0;mem_write=0;alu_src=0;b=0;br=0;bz=0;bnz=0;bcy=0;bncy=0;bs=0;bns=0;bv=0;bnv=0;Call=0;Ret=0;
+	 mem_read=0;mem_write=0;alu_src=0;mem_to_reg=0;reg_write=0;b=0;br=0;bz=0;bnz=0;bcy=0;bncy=0;bs=0;bns=0;bv=0;bnv=0;Call=0;Ret=0;
 	 alu_op = `Add;
 	 
 	 case(opcode)
@@ -83,34 +75,42 @@ module ControlUnit(
 				begin
 					alu_src=1'b1;
 					alu_op = 3'b100;
+					reg_write = 1'b1;
 				end
 		`SHRL:
 				begin
 					alu_src=1'b1;
 					alu_op = 3'b101;
+					reg_write = 1'b1;
 				end
 		`SHLLV:
 				begin
 					alu_op = 3'b100;
+					reg_write = 1'b1;
 				end
 
 		`SHRLV:
 				begin
 					alu_op = 3'b101;
+					reg_write = 1'b1;
 				end
 		`SHRA:
 				begin
 					alu_src=1'b1;
 					alu_op = 3'b110;
+					reg_write = 1'b1;
 				end
 		`SHRAV:
 				begin
 					alu_op = 3'b110;
+					reg_write = 1'b1;
 				end
 
 	 `LW:  
 					begin
 						 alu_src = 1;
+						 mem_to_reg = 1;
+						 reg_write = 1'b1;
 						 mem_read = 1;  
 					end
 	 `SW:  
@@ -122,29 +122,35 @@ module ControlUnit(
 		
 	 `aluAdd:  
 					begin
+						 reg_write = 1'b1;
 						 alu_op = `Add;
 					end
 	 `aluAddi:  
 					begin
 						 alu_src = 1;
+						 reg_write = 1'b1;
 						 alu_op = `Add;
 					end
 	 `aluComp:  
 					begin
+						 reg_write = 1'b1;
 						 alu_op = `Comp;  
 					end
-	 `aluCompi://   
+	 `aluCompi: 
 					begin
 						 alu_src = 1;
+						 reg_write = 1'b1;
 						 alu_op = `Comp;
 					end
 		
 	 `logAnd:  
 					begin
+						 reg_write = 1'b1;
 						 alu_op = `And;   
 					end
 	 `logXor:  
 					begin
+						 reg_write = 1'b1;
 						 alu_op = `Xor;   
 					end
 		 
@@ -210,7 +216,7 @@ module ControlUnit(
 			end
 			default: 
 				begin
-					mem_read=0;mem_write=0;alu_src=0;b=0;br=0;bz=0;bnz=0;bcy=0;bncy=0;bs=0;bns=0;bv=0;bnv=0;Call=0;Ret=0;
+					mem_read=0;mem_write=0;alu_src=0;mem_to_reg=0;reg_write=0;b=0;br=0;bz=0;bnz=0;bcy=0;bncy=0;bs=0;bns=0;bv=0;bnv=0;Call=0;Ret=0;
 					alu_op = `Add;
 			   end
 		endcase

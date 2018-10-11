@@ -80,7 +80,7 @@ module G9Processor(clk);
 						
 	assign read_reg_1 = instruction[25:21];//rs
    assign read_reg_2 = instruction[20:16];//rt
-	assign write_register = instruction[15:11];//rs<-rs,rt
+	assign write_register = instruction[25:21];//rs<-rs,rt
 	
 	assign imm16 = instruction[15:0];//imm
 	SignExtend SE(imm16, imm32);
@@ -101,18 +101,18 @@ module G9Processor(clk);
 						 .write_data(write_data),
 						 .read_data_1(reg_read_data_1),.read_data_2(reg_read_data_2));
 	
-	 always @(clk) begin
+	 /*always @(clk) begin
 	   $strobe("%t: IMem :%b   PC: %b ", $time, instruction,pc);
 		$strobe("%t: rs(%b): %b ", $time,read_reg_1,reg_read_data_1);
 		$strobe("%t: rt(%b): %b ", $time,read_reg_2,reg_read_data_2);
 		$strobe("%t: imm: %b ", $time,imm32);
-	 end
+	 end*/
 	// Arithmetic
 
 
 	assign OpCode = instruction[31:26];//opp
 	
-	ControlUnit CU(clk, OpCode, AluOp,
+	ControlUnit CU(OpCode, AluOp,
 						mem_read,mem_write,alu_src,mem_to_reg,reg_write,
 						b,br,bz,bnz,bcy,bncy,bs,bns,bv,bnv,Call,Ret);
 	
@@ -170,9 +170,13 @@ module G9Processor(clk);
 	 assign write_data = (mem_to_reg == 1)?  read_data: ALUResult;
 
 	always @(clk) begin
+	   $strobe("%t: PC: %b ", $time, pc);
+		$strobe("%t: IMem :%b   ", $time, instruction);
+		$strobe("%t: rs(%b): %b ", $time,read_reg_1,reg_read_data_1);
+		$strobe("%t: rt(%b): %b ", $time,read_reg_2,reg_read_data_2);
 		$strobe("%t: AluOp: %b ", $time,AluOp);
-		$strobe("%t: ALUResult  %b  write_data %b ", $time, ALUResult, write_data);
-		$strobe("%t: PC_NXT: %b mem_to_reg %b", $time,pc_next,mem_to_reg);
+		$strobe("%t: ALUResult  %b  ", $time, ALUResult);
+		$strobe("%t: PC_NXT: %b ", $time,pc_next);
 	end
 	
 endmodule

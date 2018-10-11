@@ -133,7 +133,7 @@ LAB6:    t34 = *((unsigned int *)t16);
     t35 = *((unsigned int *)t17);
     t36 = (t34 - t35);
     t37 = (t36 + 1);
-    xsi_vlogvar_wait_assign_value(t15, t14, 0, *((unsigned int *)t17), t37, 0LL);
+    xsi_vlogvar_assign_value(t15, t14, 0, *((unsigned int *)t17), t37);
     goto LAB7;
 
 }
