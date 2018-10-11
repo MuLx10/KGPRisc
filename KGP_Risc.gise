@@ -96,8 +96,9 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1539235246" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1539235246">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539240755" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539240755">
+    <transform xil_pn:end_ts="1539248305" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539248305">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU_TB.v"/>
@@ -127,7 +128,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539240755" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539240755">
+    <transform xil_pn:end_ts="1539248305" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539248305">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU_TB.v"/>
@@ -145,7 +146,7 @@
       <outfile xil_pn:name="RegisterFile.v"/>
       <outfile xil_pn:name="SignExtend.v"/>
     </transform>
-    <transform xil_pn:end_ts="1539240758" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539240755">
+    <transform xil_pn:end_ts="1539248307" xil_pn:in_ck="-6615519276089381909" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539248305">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -157,7 +158,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1539240758" xil_pn:in_ck="817772055088381444" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539240758">
+    <transform xil_pn:end_ts="1539248308" xil_pn:in_ck="817772055088381444" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539248307">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="G9_TB_isim_beh.wdb"/>
@@ -166,12 +167,12 @@
     </transform>
     <transform xil_pn:end_ts="1539235204" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1539235204">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1539239536" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5879275991060880317" xil_pn:start_ts="1539239536">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 
