@@ -78,8 +78,7 @@ module G9Processor(clk);
 								  .dina(32'b0), 
 								  .douta(instruction));
 						
-	assign read_reg_1 = instruction[25:21];//rs
-   assign read_reg_2 = instruction[20:16];//rt
+	
 	
 	
 	assign imm16 = instruction[15:0];//imm
@@ -98,7 +97,9 @@ module G9Processor(clk);
 	ControlUnit CU(OpCode, AluOp,
 						mem_read,mem_write,alu_src,mem_to_reg,reg_write,
 						b,br,bz,bnz,bcy,bncy,bs,bns,bv,bnv,Call,Ret);
-	
+						
+	assign read_reg_1 = (Ret) ? RA : instruction[25:21];//rs
+   assign read_reg_2 = instruction[20:16];//rt
 	assign write_register = (Call)? RA : instruction[25:21];//rs<-rs,rt
 	
 	RegisterFile RF(.clk(clk),
@@ -149,9 +150,9 @@ module G9Processor(clk);
 	 assign pc_bnv = (~overflowflag & bnv == 1'b1) ? pc_branch : pc_bv;
 	 
 	 assign pc_b = (b == 1'b1)?pc_branch:pc_bnv;
-	 assign pc_br = (br == 1'b1)?read_reg_1:pc_b;
+	 assign pc_br = (br == 1'b1)?reg_read_data_1:pc_b;
 	 
-	 assign branch = b | br | bz | bnz | bcy | bncy | bs | bns | bv | bnv;
+	 assign branch = b | br | bz | bnz | bcy | bncy | bs | bns | bv | bnv | Ret ;
 	 
 	 /*RegisterFile RF_ClRt(.clk(clk),
 					 .reg_write(Call),
@@ -160,7 +161,7 @@ module G9Processor(clk);
 					 .write_data(pc_4),
 					 .read_data_1(RA_data),.read_data_2(temp));*/
 				 
-	 assign pc_next = (Ret)?RA_data:pc_br;
+	 assign pc_next = (Ret)?reg_read_data_1:pc_br;
 	 	
 	 DataMemory DMem (
 		.clk(clk), 
@@ -180,7 +181,7 @@ module G9Processor(clk);
 		$strobe("%t: rt(%b): %b ", $time,read_reg_2,reg_read_data_2);
 		$strobe("%t: AluOp: %b ", $time,AluOp);
 		$strobe("%t: ALUResult  %b  ", $time, ALUResult);
-		$strobe("%t: PC_NXT: %b ", $time,pc_next);
+		$strobe("%t: PC_NXT: %b Ret %b ", $time,pc_next,Ret);
 	 end
 	
 endmodule

@@ -31,8 +31,8 @@ module InstructionMemory(clka, wea, addra, dina, douta);
 		//$readmemb ("Imem.data", Imem);
 		 for(i=0; i<MemSize; i=i+1)
             IMem[i] = 32'b00000000001111110000000000000000;
-		 IMem[1] = 32'b01111000000111110000000000000000;
-		 IMem[7] = 32'b01111100000111110000000000000000;
+		 IMem[1'b1] = 32'b01111000000111110000000000000000;
+		 IMem[4] = 32'b01111100000111110000000000000000;
 	end
 	
 	always @(clka) 
