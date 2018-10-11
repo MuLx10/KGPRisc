@@ -116,3 +116,4 @@ Finished circuit initialization process.
              1000000: ALUResult  00000000000000000000000000000000 
              1000000: PC_NXT: 00000000000000000000000000001100  
 
+# exit 0
