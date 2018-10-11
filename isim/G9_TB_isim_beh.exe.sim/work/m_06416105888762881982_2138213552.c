@@ -26,7 +26,8 @@ static int ng1[] = {0, 0};
 static unsigned int ng2[] = {4128768U, 0U};
 static int ng3[] = {1, 0};
 static unsigned int ng4[] = {2015297536U, 0U};
-static int ng5[] = {5, 0};
+static unsigned int ng5[] = {2082406400U, 0U};
+static int ng6[] = {7, 0};
 
 
 
@@ -114,7 +115,7 @@ LAB5:    xsi_set_current_line(34, ng0);
         goto LAB8;
 
 LAB9:    xsi_set_current_line(35, ng0);
-    t1 = ((char*)((ng4)));
+    t1 = ((char*)((ng5)));
     t2 = (t0 + 2360);
     t3 = (t0 + 2360);
     t4 = (t3 + 72U);
@@ -122,7 +123,7 @@ LAB9:    xsi_set_current_line(35, ng0);
     t12 = (t0 + 2360);
     t13 = (t12 + 64U);
     t16 = *((char **)t13);
-    t17 = ((char*)((ng5)));
+    t17 = ((char*)((ng6)));
     xsi_vlog_generic_convert_array_indices(t6, t14, t5, t16, 2, 1, t17, 32, 1);
     t18 = (t6 + 4);
     t7 = *((unsigned int *)t18);

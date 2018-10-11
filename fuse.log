@@ -32,5 +32,5 @@ Waiting for 3 sub-compilation(s) to finish...
 Compiled 10 Verilog Units
 Built simulation executable /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_isim_beh.exe
 Fuse Memory Usage: 656132 KB
-Fuse CPU Usage: 1740 ms
-GCC CPU Usage: 1820 ms
+Fuse CPU Usage: 1730 ms
+GCC CPU Usage: 1770 ms
