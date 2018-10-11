@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.xst" -ofn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.syr" 

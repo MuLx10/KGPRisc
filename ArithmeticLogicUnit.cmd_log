@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ArithmeticLogicUnit.xst" -ofn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ArithmeticLogicUnit.syr" 
+xst -intstyle ise -ifn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ArithmeticLogicUnit.xst" -ofn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ArithmeticLogicUnit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-5 ArithmeticLogicUnit.ngc ArithmeticLogicUnit.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o ArithmeticLogicUnit_map.ncd ArithmeticLogicUnit.ngd ArithmeticLogicUnit.pcf 
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o ArithmeticLogicUnit_map.ncd ArithmeticLogicUnit.ngd ArithmeticLogicUnit.pcf 
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o ArithmeticLogicUnit_map.ncd ArithmeticLogicUnit.ngd ArithmeticLogicUnit.pcf 
