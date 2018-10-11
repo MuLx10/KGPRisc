@@ -83,7 +83,7 @@ module G9Processor(clk);
 	assign write_register = instruction[15:11];//rs<-rs,rt
 	
 	assign imm16 = instruction[15:0];//imm
-	SignExtend SE(clk, imm16, imm32);
+	SignExtend SE(imm16, imm32);
 	
 	/*/////Debug
 	output reg  [size-1:0] instr;

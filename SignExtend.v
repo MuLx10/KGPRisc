@@ -18,9 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module SignExtend(input clk, input [15:0] imm16, output reg [31:0] imm32);
-	 always @( clk ) 
+module SignExtend(input [15:0] imm16, output reg [31:0] imm32);
+	 always @( * ) 
 	 begin
-			imm32[31:0] <= { {16{imm16[15]}},imm16[15:0] };
+			imm32[31:0] = { {16{imm16[15]}},imm16[15:0] };
 	 end
 endmodule

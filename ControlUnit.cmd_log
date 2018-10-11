@@ -1,3 +1,6 @@
 xst -intstyle ise -ifn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.xst" -ofn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.syr" 
 xst -intstyle ise -ifn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.xst" -ofn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.syr" 
 xst -intstyle ise -ifn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.xst" -ofn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.syr" 
+xst -intstyle ise -ifn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.xst" -ofn "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-5 ControlUnit.ngc ControlUnit.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o ControlUnit_map.ncd ControlUnit.ngd ControlUnit.pcf 

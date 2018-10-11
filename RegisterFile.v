@@ -32,10 +32,10 @@ module RegisterFile(clk,
 	 input  [size-1:0] write_data;
 	 //read port 1
 	 input  [4:0]  read_reg_1;
-	 output  reg [size-1:0] read_data_1;
+	 output   [size-1:0] read_data_1;
 	 //read port 2
 	 input  [4:0]  read_reg_2;
-	 output  reg [size-1:0] read_data_2;
+	 output  [size-1:0] read_data_2;
 
 	 reg [size-1:0] RF [size:0];
 	 integer i;
@@ -48,15 +48,13 @@ module RegisterFile(clk,
 	 always @(negedge clk)
 	 begin
 		if(reg_write) 
-		   RF[write_register] <= write_data;
-		$strobe("%t: Write_reg %b Write Data %b", $time, reg_write, write_data);
+		   RF[write_register] = write_data;
+		//$strobe("%t: Write_reg %b Write Data %b", $time, reg_write, write_data);
 	 end
-	 always @(posedge clk) 
-	 begin
-		read_data_2 <= RF[read_reg_2];
-	   read_data_1 <= RF[read_reg_1];
-		$strobe("%t: Read Values1 RF(%d)  %b ", $time, read_reg_1, read_data_1);
-		$strobe("%t: Read Values2 RF(%d)  %b ", $time, read_reg_2, read_data_2);
-	 end
+ 	 assign read_data_2 = RF[read_reg_2];
+	 assign read_data_1 = RF[read_reg_1];
+		//$strobe("%t: Read Values1 RF(%d)  %b ", $time, read_reg_1, read_data_1);
+		//$strobe("%t: Read Values2 RF(%d)  %b ", $time, read_reg_2, read_data_2);
+	
 
 endmodule
