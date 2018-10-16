@@ -33,7 +33,7 @@ module ProgramCounter(clk, reset,branch, pc_next, pc);
 		pc = 0;
 	end
 
-	always @( clk)
+	always @(posedge clk)
 	begin
 		if (reset)
 			pc = 0;

@@ -22,7 +22,7 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB.v";
-static int ng1[] = {1, 0};
+static int ng1[] = {0, 0};
 
 
 

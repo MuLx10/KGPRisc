@@ -136,7 +136,7 @@ module G9Processor(clk);
 		.zflag(zflag)
 	 );
 	
-	 assign pc_4 = pc + 32'b1;
+	 assign pc_4 = pc + 1;
 	 assign pc_branch = pc_4 + imm32;
 	 
 	 assign pc_bz = (zflag & bz == 1'b1) ? pc_branch : pc_4;
@@ -177,7 +177,7 @@ module G9Processor(clk);
 	 assign write_data = (Call)?pc_4:write_datai;
 	 
 	 always @(clk) begin
-	   $strobe("%t: PC: %b ", $time, pc);
+	   $strobe("\n\n%t: PC: %b ", $time, pc);
 		$strobe("%t: IMem :%b   ", $time, instruction);
 		$strobe("%t: rs(%b): %b ", $time,read_reg_1,reg_read_data_1);
 		$strobe("%t: rt(%b): %b ", $time,read_reg_2,reg_read_data_2);

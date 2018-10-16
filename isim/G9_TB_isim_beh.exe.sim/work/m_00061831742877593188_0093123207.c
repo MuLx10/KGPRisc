@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "%t: PC: %b ";
+static const char *ng0 = "\n\n%t: PC: %b ";
 static const char *ng1 = "%t: IMem :%b   ";
 static const char *ng2 = "%t: rs(%b): %b ";
 static const char *ng3 = "%t: rt(%b): %b ";
@@ -1146,7 +1146,7 @@ LAB3:    goto *t2;
 LAB2:    xsi_set_current_line(139, ng7);
     t2 = (t0 + 4128U);
     t3 = *((char **)t2);
-    t2 = ((char*)((ng10)));
+    t2 = ((char*)((ng11)));
     memset(t4, 0, 8);
     xsi_vlog_unsigned_add(t4, 32, t3, 32, t2, 32);
     t5 = (t0 + 20848);
