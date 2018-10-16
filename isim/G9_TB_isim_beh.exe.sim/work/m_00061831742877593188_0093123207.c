@@ -21,13 +21,13 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "\n\n%t: PC: %b ";
-static const char *ng1 = "%t: IMem :%b   ";
-static const char *ng2 = "%t: rs(%b): %b ";
-static const char *ng3 = "%t: rt(%b): %b ";
-static const char *ng4 = "%t: AluOp: %b ";
+static const char *ng0 = "\n\n%t: PC:        %b ";
+static const char *ng1 = "%t: IMem :     %b   ";
+static const char *ng2 = "%t: rs(%b):    %b ";
+static const char *ng3 = "%t: rt(%b):    %b ";
+static const char *ng4 = "%t: AluOp:     %b ";
 static const char *ng5 = "%t: ALUResult  %b ";
-static const char *ng6 = "%t: PC_NXT: %b  \n";
+static const char *ng6 = "%t: PC_NXT:    %b  \n";
 static const char *ng7 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v";
 static unsigned int ng8[] = {31U, 0U};
 static int ng9[] = {0, 0};
