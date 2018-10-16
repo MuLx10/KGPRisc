@@ -1,36 +1,27 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_isim_beh.exe -prj /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_beh.prj G9_TB work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/IMem_TB_isim_beh.exe -prj /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/IMem_TB_beh.prj work.IMem_TB work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/SignExtend.v" into library work
-Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/RegisterFile.v" into library work
-Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ProgramCounter.v" into library work
-Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/InstructionMemory.v" into library work
-Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/DataMemory.v" into library work
-Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ControlUnit.v" into library work
-Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ArithmeticLogicUnit.v" into library work
-Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v" into library work
-Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB.v" into library work
+Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ipcore_dir/InstructionMemory.v" into library work
+Analyzing Verilog file "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/IMem_TB.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:189 - "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/IMem_TB.v" Line 40: Size mismatch in connection of port <addra>. Formal port size is 10-bit while actual signal size is 32-bit.
 Completed static elaboration
-Fuse Memory Usage: 95616 KB
-Fuse CPU Usage: 1720 ms
-Compiling module ProgramCounter
+Fuse Memory Usage: 96732 KB
+Fuse CPU Usage: 1870 ms
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
 Compiling module InstructionMemory
-Compiling module SignExtend
-Compiling module ControlUnit
-Compiling module RegisterFile
-Compiling module ArithmeticLogicUnit
-Compiling module DataMemory
-Compiling module G9Processor
-Compiling module G9_TB
+Compiling module IMem_TB
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 3 sub-compilation(s) to finish...
-Compiled 10 Verilog Units
-Built simulation executable /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_isim_beh.exe
-Fuse Memory Usage: 656136 KB
-Fuse CPU Usage: 1800 ms
-GCC CPU Usage: 1740 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 Verilog Units
+Built simulation executable /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/IMem_TB_isim_beh.exe
+Fuse Memory Usage: 660288 KB
+Fuse CPU Usage: 1950 ms
+GCC CPU Usage: 1870 ms

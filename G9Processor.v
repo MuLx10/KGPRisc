@@ -101,7 +101,7 @@ module G9Processor(clk);
 	assign read_reg_1 = (Ret) ? RA : instruction[25:21];//rs
    assign read_reg_2 = instruction[20:16];//rt
 	
-	assign write_registeri = (Call)? RA : instruction[25:21];//rs<-rs,rt
+	assign write_registeri = (Call)? RA : instruction[25:21];//rs<-rs op rt
 	assign write_register = (mem_to_reg)? read_reg_2:write_registeri;
 	
 	RegisterFile RF(.clk(clk),

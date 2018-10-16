@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> 
 Reading design: G9Processor.prj
@@ -480,37 +480,37 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_32_3> (without i
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_32_2> (without init value) has a constant value of 0 in block <RegisterFile>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_32_1> (without init value) has a constant value of 0 in block <RegisterFile>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF_32_0> (without init value) has a constant value of 0 in block <RegisterFile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: Madd_pc_addsub0000_cy<0>, Madd_pc_addsub0000_cy<20>, pc_addsub0000<0>, Madd_pc_addsub0000_cy<24>, Madd_pc_addsub0000_cy<1>, Madd_pc_addsub0000_cy<29>, Madd_pc_addsub0000_cy<10>, pc_addsub0000<31>, Madd_pc_addsub0000_cy<25>, Madd_pc_addsub0000_cy<4>, Madd_pc_addsub0000_cy<5>, Madd_pc_addsub0000_cy<30>, Madd_pc_addsub0000_lut<0>, Madd_pc_addsub0000_cy<6>, Madd_pc_addsub0000_cy<12>, Madd_pc_addsub0000_cy<19>, Madd_pc_addsub0000_cy<9>, pc<0>, Madd_pc_addsub0000_cy<17>, Madd_pc_addsub0000_cy<15>, Madd_pc_addsub0000_cy<18>, Madd_pc_addsub0000_cy<8>, Madd_pc_addsub0000_cy<2>, pc<31>, Madd_pc_addsub0000_cy<22>, Madd_pc_addsub0000_cy<13>, Madd_pc_addsub0000_cy<26>, Madd_pc_addsub0000_cy<11>, Madd_pc_addsub0000_cy<16>, Madd_pc_addsub0000_cy<23>, Madd_pc_addsub0000_cy<28>, Madd_pc_addsub0000_cy<3>, Madd_pc_addsub0000_cy<21>, Madd_pc_addsub0000_cy<27>, Madd_pc_addsub0000_cy<14>, Madd_pc_addsub0000_cy<7>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<30>, pc<30>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: Madd_pc_addsub0000_cy<29>, Madd_pc_addsub0000_cy<2>, Madd_pc_addsub0000_cy<19>, Madd_pc_addsub0000_cy<24>, Madd_pc_addsub0000_cy<25>, Madd_pc_addsub0000_cy<9>, Madd_pc_addsub0000_cy<10>, pc<0>, Madd_pc_addsub0000_cy<26>, pc_addsub0000<0>, Madd_pc_addsub0000_cy<14>, Madd_pc_addsub0000_cy<12>, Madd_pc_addsub0000_cy<27>, Madd_pc_addsub0000_cy<5>, Madd_pc_addsub0000_cy<4>, Madd_pc_addsub0000_cy<6>, Madd_pc_addsub0000_cy<7>, Madd_pc_addsub0000_cy<3>, Madd_pc_addsub0000_cy<8>, Madd_pc_addsub0000_cy<17>, pc_addsub0000<31>, Madd_pc_addsub0000_cy<28>, Madd_pc_addsub0000_cy<1>, Madd_pc_addsub0000_cy<22>, Madd_pc_addsub0000_cy<16>, Madd_pc_addsub0000_lut<0>, Madd_pc_addsub0000_cy<30>, Madd_pc_addsub0000_cy<13>, Madd_pc_addsub0000_cy<0>, Madd_pc_addsub0000_cy<21>, Madd_pc_addsub0000_cy<20>, Madd_pc_addsub0000_cy<15>, pc<31>, Madd_pc_addsub0000_cy<11>, Madd_pc_addsub0000_cy<23>, Madd_pc_addsub0000_cy<18>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<30>, pc_addsub0000<30>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<29>, pc_addsub0000<29>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<28>, pc<28>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<28>, pc_addsub0000<28>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<27>, pc<27>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<26>, pc_addsub0000<26>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<26>, pc<26>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<25>, pc<25>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<24>, pc_addsub0000<24>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<23>, pc_addsub0000<23>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<22>, pc<22>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<21>, pc_addsub0000<21>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<23>, pc<23>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<22>, pc_addsub0000<22>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<21>, pc<21>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<20>, pc_addsub0000<20>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<19>, pc_addsub0000<19>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<18>, pc_addsub0000<18>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<19>, pc<19>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<18>, pc<18>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<17>, pc<17>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<16>, pc<16>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<15>, pc_addsub0000<15>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<15>, pc<15>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<14>, pc_addsub0000<14>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<13>, pc_addsub0000<13>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<12>, pc<12>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<11>, pc_addsub0000<11>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<10>, pc<10>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<9>, pc_addsub0000<9>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<8>, pc_addsub0000<8>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<7>, pc<7>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<6>, pc<6>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<13>, pc<13>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<12>, pc_addsub0000<12>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<11>, pc<11>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<10>, pc_addsub0000<10>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<9>, pc<9>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<8>, pc<8>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<7>, pc_addsub0000<7>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<6>, pc_addsub0000<6>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<5>, pc_addsub0000<5>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<4>, pc_addsub0000<4>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<3>, pc_addsub0000<3>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<4>, pc<4>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<3>, pc<3>.
 WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<2>, pc<2>.
-WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc<1>, pc_addsub0000<1>.
+WARNING:Xst:2170 - Unit ProgramCounter : the following signal(s) form a combinatorial loop: pc_addsub0000<1>, pc<1>.
 
 Optimizing unit <G9Processor> ...
 
@@ -2690,13 +2690,13 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 18.79 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 19.24 secs
  
 --> 
 
 
-Total memory usage is 565680 kilobytes
+Total memory usage is 565824 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 2235 (   0 filtered)
