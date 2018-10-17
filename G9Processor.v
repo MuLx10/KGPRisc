@@ -184,7 +184,8 @@ module G9Processor(clk);
 		$strobe("%t: IMem :     %b ", $time, instruction);
 		$strobe("%t: rs(%b):    %d ", $time,read_reg_1,reg_read_data_1);
 		$strobe("%t: rt(%b):    %d ", $time,read_reg_2,reg_read_data_2);
-		$strobe("%t: AluOp:     %b ", $time,AluOp);
+		$strobe("%t: imm :      %d ", $time,imm32);
+		$strobe("%t: AluOp:  %b, branch:  %b", $time,AluOp,branch);
 		$strobe("%t: ALUResult  %d ", $time, ALUResult);
 		$strobe("%t: PC_NXT:    %d ", $time,pc_next);
 	 end

@@ -4,3 +4,4 @@ add a0, t0
 add a0, t1
 xor rs,rs
 add rs, a0
+b -7

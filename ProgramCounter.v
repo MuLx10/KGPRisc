@@ -30,13 +30,13 @@ module ProgramCounter(clk, reset,branch, pc_next, pc);
 	
 	initial 
 	begin
-		pc = 0;
+		pc = -1;
 	end
 
-	always @(posedge clk)
+	always @(negedge clk)
 	begin
 		if (reset)
-			pc = 0;
+			pc = -1;
 		if (branch)
 			pc = pc_next;
 		else

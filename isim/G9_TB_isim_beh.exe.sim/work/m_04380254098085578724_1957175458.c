@@ -22,29 +22,31 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ProgramCounter.v";
-static int ng1[] = {0, 0};
-static int ng2[] = {1, 0};
+static int ng1[] = {1, 0};
 
 
 
 static void Initial_31_0(char *t0)
 {
-    char *t1;
+    char t1[8];
     char *t2;
+    char *t3;
 
 LAB0:    xsi_set_current_line(32, ng0);
 
 LAB2:    xsi_set_current_line(33, ng0);
-    t1 = ((char*)((ng1)));
-    t2 = (t0 + 2064);
-    xsi_vlogvar_assign_value(t2, t1, 0, 0, 32);
+    t2 = ((char*)((ng1)));
+    memset(t1, 0, 8);
+    xsi_vlog_signed_unary_minus(t1, 32, t2, 32);
+    t3 = (t0 + 2064);
+    xsi_vlogvar_assign_value(t3, t1, 0, 0, 32);
 
 LAB1:    return;
 }
 
 static void Always_36_1(char *t0)
 {
-    char t13[8];
+    char t11[8];
     char *t1;
     char *t2;
     char *t3;
@@ -55,8 +57,8 @@ static void Always_36_1(char *t0)
     unsigned int t8;
     unsigned int t9;
     unsigned int t10;
-    char *t11;
     char *t12;
+    char *t13;
 
 LAB0:    t1 = (t0 + 3224U);
     t2 = *((char **)t1);
@@ -104,18 +106,20 @@ LAB10:    xsi_set_current_line(43, ng0);
     t2 = (t0 + 2064);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
-    t5 = ((char*)((ng2)));
-    memset(t13, 0, 8);
-    xsi_vlog_unsigned_add(t13, 32, t4, 32, t5, 32);
-    t11 = (t0 + 2064);
-    xsi_vlogvar_assign_value(t11, t13, 0, 0, 32);
+    t5 = ((char*)((ng1)));
+    memset(t11, 0, 8);
+    xsi_vlog_unsigned_add(t11, 32, t4, 32, t5, 32);
+    t12 = (t0 + 2064);
+    xsi_vlogvar_assign_value(t12, t11, 0, 0, 32);
 
 LAB11:    goto LAB2;
 
 LAB6:    xsi_set_current_line(39, ng0);
-    t11 = ((char*)((ng1)));
-    t12 = (t0 + 2064);
-    xsi_vlogvar_assign_value(t12, t11, 0, 0, 32);
+    t12 = ((char*)((ng1)));
+    memset(t11, 0, 8);
+    xsi_vlog_signed_unary_minus(t11, 32, t12, 32);
+    t13 = (t0 + 2064);
+    xsi_vlogvar_assign_value(t13, t11, 0, 0, 32);
     goto LAB8;
 
 LAB9:    xsi_set_current_line(41, ng0);

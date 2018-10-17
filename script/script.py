@@ -33,7 +33,8 @@ OPCODE['bnv'] = "011101"
 OPCODE['call'] = "011110"
 OPCODE['ret'] = "011111"
 
-get_bin = lambda x, n: format(x, 'b').zfill(n)
+get_bin = lambda x,n : ''.join(reversed( [str((x >> i) & 1) for i in range(n)] ) )
+
 registers = {}
 registers['rs'] = get_bin(0,5)
 registers['rt'] = get_bin(1,5)
@@ -53,7 +54,7 @@ op3 = ["b", "bz", "bnz", "bcy", "bncy", "bs", "bns", "bv", "bnv"]
 import sys
 filename = sys.argv[1]
 
-fout = open('../InstructionMemory.mif','w')
+fout = open('InstructionMemory.mif','w')
 instr_cnt = 0
 with open(filename,'r') as instrfile:
     while True:
