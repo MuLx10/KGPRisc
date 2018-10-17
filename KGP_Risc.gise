@@ -111,9 +111,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539761313" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539761313">
+    <transform xil_pn:end_ts="1539762120" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539762120">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_TB.v"/>
       <outfile xil_pn:name="ArithmeticLogicUnit.v"/>
       <outfile xil_pn:name="CU_TB.v"/>
@@ -141,9 +145,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539761313" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539761313">
+    <transform xil_pn:end_ts="1539762120" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539762120">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU_TB.v"/>
       <outfile xil_pn:name="ArithmeticLogicUnit.v"/>
       <outfile xil_pn:name="CU_TB.v"/>
@@ -159,10 +168,13 @@
       <outfile xil_pn:name="SignExtend.v"/>
       <outfile xil_pn:name="ipcore_dir/InstructionMemory.v"/>
     </transform>
-    <transform xil_pn:end_ts="1539761317" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539761313">
+    <transform xil_pn:end_ts="1539762124" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539762120">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="G9_TB_beh.prj"/>
       <outfile xil_pn:name="G9_TB_isim_beh.exe"/>
@@ -171,9 +183,12 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1539761317" xil_pn:in_ck="8592868751920022597" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539761317">
+    <transform xil_pn:end_ts="1539762124" xil_pn:in_ck="8592868751920022597" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539762124">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="G9_TB_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -206,12 +221,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539715077" xil_pn:in_ck="-4413136767491492436" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="6671250488922231214" xil_pn:start_ts="1539714898">
+    <transform xil_pn:end_ts="1539762242" xil_pn:in_ck="-4413136767491492436" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="6671250488922231214" xil_pn:start_ts="1539762199">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ArithmeticLogicUnit.ngr"/>
       <outfile xil_pn:name="ControlUnit.ngr"/>
       <outfile xil_pn:name="G9Processor.lso"/>
