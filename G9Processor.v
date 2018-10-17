@@ -29,8 +29,10 @@ module G9Processor(clk);
 	
 	wire [RegFileSize-1:0] read_reg_1;
 	wire [RegFileSize-1:0] read_reg_2;
-	wire [RegFileSize-1:0] write_register; wire [RegFileSize-1:0] write_registeri;
-	wire [size-1:0] write_data;wire [size-1:0]write_datai;
+	wire [RegFileSize-1:0] write_register; 
+	wire [RegFileSize-1:0] write_registeri;
+	wire [size-1:0] write_data;
+	wire [size-1:0]write_datai;
 	wire [size-1:0] reg_read_data_1;
 	wire [size-1:0] reg_read_data_2;
 	wire [size-1:0] read_data_2;

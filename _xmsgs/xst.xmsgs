@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;G9Processor.v&quot; line 77 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="new" ><arg fmt="%s" index="1">&quot;G9Processor.v&quot; line 79 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addra</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">ipcore_dir/InstructionMemory.v</arg>&quot; line <arg fmt="%d" index="2">75</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">InstructionMemory</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">ipcore_dir/InstructionMemory.v</arg>&quot; line <arg fmt="%d" index="2">77</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">InstructionMemory</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2319" delta="old" >&quot;<arg fmt="%s" index="1">RegisterFile.v</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Signal <arg fmt="%s" index="3">RF</arg> in initial block is partially initialized. The initialization will be ignored.
@@ -159,10 +159,10 @@
 <msg type="warning" file="Xst" num="1474" delta="old" >Core &lt;<arg fmt="%s" index="1">InstructionMemory</arg>&gt; was not loaded for &lt;<arg fmt="%s" index="2">IMem</arg>&gt; as one or more ports did not line up with component declaration.  Declared <arg fmt="%s" index="3">input</arg> port &lt;<arg fmt="%s" index="4">wea&lt;0&gt;</arg>&gt; was not found in the core.  Please make sure that component declaration ports are consistent with the core ports including direction and bus-naming conventions.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_RF</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_RF</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_RF_ren</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_RF_ren</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
