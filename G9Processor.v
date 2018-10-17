@@ -177,13 +177,14 @@ module G9Processor(clk);
 	 assign write_data = (Call)?pc_4:write_datai;
 	 
 	 always @(clk) begin
-	   $strobe("\n\n%t: PC:        %b ", $time, pc);
-		$strobe("%t: IMem :     %b   ", $time, instruction);
+	   $strobe("\n\n");
+	   $strobe("%t: PC:        %b ", $time, pc);
+		$strobe("%t: IMem :     %b ", $time, instruction);
 		$strobe("%t: rs(%b):    %b ", $time,read_reg_1,reg_read_data_1);
 		$strobe("%t: rt(%b):    %b ", $time,read_reg_2,reg_read_data_2);
 		$strobe("%t: AluOp:     %b ", $time,AluOp);
 		$strobe("%t: ALUResult  %b ", $time, ALUResult);
-		$strobe("%t: PC_NXT:    %b  \n", $time,pc_next);
+		$strobe("%t: PC_NXT:    %b ", $time,pc_next);
 	 end
 	
 endmodule

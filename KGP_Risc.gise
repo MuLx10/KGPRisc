@@ -111,7 +111,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539714744" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539714744">
+    <transform xil_pn:end_ts="1539754246" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539754246">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU_TB.v"/>
@@ -129,11 +129,11 @@
       <outfile xil_pn:name="SignExtend.v"/>
       <outfile xil_pn:name="ipcore_dir/InstructionMemory.v"/>
     </transform>
-    <transform xil_pn:end_ts="1539705021" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2884325570970878292" xil_pn:start_ts="1539705021">
+    <transform xil_pn:end_ts="1539753355" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2884325570970878292" xil_pn:start_ts="1539753355">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539705021" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-609060803662375324" xil_pn:start_ts="1539705021">
+    <transform xil_pn:end_ts="1539753355" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-609060803662375324" xil_pn:start_ts="1539753355">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -141,7 +141,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539714744" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539714744">
+    <transform xil_pn:end_ts="1539754246" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539754246">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU_TB.v"/>
@@ -159,7 +159,7 @@
       <outfile xil_pn:name="SignExtend.v"/>
       <outfile xil_pn:name="ipcore_dir/InstructionMemory.v"/>
     </transform>
-    <transform xil_pn:end_ts="1539714748" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539714744">
+    <transform xil_pn:end_ts="1539754250" xil_pn:in_ck="4099795465878456122" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3754300482763882732" xil_pn:start_ts="1539754246">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -171,7 +171,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1539714748" xil_pn:in_ck="8592868751920022597" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539714748">
+    <transform xil_pn:end_ts="1539754328" xil_pn:in_ck="8592868751920022597" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2325649197664203625" xil_pn:start_ts="1539754327">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="G9_TB_isim_beh.wdb"/>
@@ -206,16 +206,27 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539672663" xil_pn:in_ck="-9052852868596363523" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="6671250488922231214" xil_pn:start_ts="1539672627">
+    <transform xil_pn:end_ts="1539715077" xil_pn:in_ck="-4413136767491492436" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="6671250488922231214" xil_pn:start_ts="1539714898">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="ArithmeticLogicUnit.ngr"/>
+      <outfile xil_pn:name="ControlUnit.ngr"/>
+      <outfile xil_pn:name="G9Processor.lso"/>
+      <outfile xil_pn:name="G9Processor.ngc"/>
+      <outfile xil_pn:name="G9Processor.ngr"/>
+      <outfile xil_pn:name="G9Processor.prj"/>
+      <outfile xil_pn:name="G9Processor.stx"/>
+      <outfile xil_pn:name="G9Processor.syr"/>
+      <outfile xil_pn:name="G9Processor.xst"/>
+      <outfile xil_pn:name="G9Processor_xst.xrpt"/>
+      <outfile xil_pn:name="InstructionMemory.ngr"/>
+      <outfile xil_pn:name="RegisterFile.ngr"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
     </transform>
     <transform xil_pn:end_ts="1539239536" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5879275991060880317" xil_pn:start_ts="1539239536">
       <status xil_pn:value="SuccessfullyRun"/>

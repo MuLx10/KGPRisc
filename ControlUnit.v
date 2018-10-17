@@ -57,7 +57,7 @@
 `define Comp 3'b001
 `define Xor 3'b011
 `define And 3'b010
-
+`define None 3'b111
 
 module ControlUnit(
       input[5:0] opcode,
@@ -68,7 +68,7 @@ module ControlUnit(
 	always @(*)
 	begin
 	 mem_read=0;mem_write=0;alu_src=0;mem_to_reg=0;reg_write=0;b=0;br=0;bz=0;bnz=0;bcy=0;bncy=0;bs=0;bns=0;bv=0;bnv=0;Call=0;Ret=0;
-	 alu_op = `Add;
+	 alu_op = `None;
 	 
 	 case(opcode)
 		`SHLL:
@@ -216,7 +216,6 @@ module ControlUnit(
 			default: 
 				begin
 					mem_read=0;mem_write=0;alu_src=0;mem_to_reg=0;reg_write=0;b=0;br=0;bz=0;bnz=0;bcy=0;bncy=0;bs=0;bns=0;bv=0;bnv=0;Call=0;Ret=0;
-					alu_op = `Add;
 			   end
 		endcase
 	end

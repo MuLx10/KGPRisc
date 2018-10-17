@@ -45,7 +45,7 @@ module RegisterFile(clk,
 	  for(i=0;i<size;i=i+1)
 			RF[i] = i;
 	 end
-	 always @(clk)
+	 always @(posedge clk)
 	 begin
 		if(reg_write) 
 		   RF[write_register] = write_data;
@@ -60,10 +60,6 @@ module RegisterFile(clk,
 		$strobe("%t: RF(%d)  %b ", $time,0, RF[0]);
 		$strobe("%t: RF(%d)  %b ", $time,1, RF[1]);
 		$strobe("%t: RF(%d)  %b ", $time,2, RF[2]);
-		$strobe("%t: RF(%d)  %b ", $time,3, RF[3]);
-		$strobe("%t: RF(%d)  %b ", $time,4, RF[4]);
-		$strobe("%t: RF(%d)  %b ", $time,5, RF[5]);
-		$strobe("%t: RF(%d)  %b ", $time,6, RF[6]);
 		$strobe("%t: RF(%d)  %b \n\n", $time,31, RF[31]);
 	 end
 endmodule
