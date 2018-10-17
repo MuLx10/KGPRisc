@@ -1,0 +1,6 @@
+addi t0, 90
+addi t1, 45
+add a0, t0
+add a0, t1
+xor rs,rs
+add rs, a0

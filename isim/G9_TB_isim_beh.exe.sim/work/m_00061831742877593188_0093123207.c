@@ -22,13 +22,13 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "\n\n";
-static const char *ng1 = "%t: PC:        %b ";
+static const char *ng1 = "%t: PC:        %d ";
 static const char *ng2 = "%t: IMem :     %b ";
-static const char *ng3 = "%t: rs(%b):    %b ";
-static const char *ng4 = "%t: rt(%b):    %b ";
+static const char *ng3 = "%t: rs(%b):    %d ";
+static const char *ng4 = "%t: rt(%b):    %d ";
 static const char *ng5 = "%t: AluOp:     %b ";
-static const char *ng6 = "%t: ALUResult  %b ";
-static const char *ng7 = "%t: PC_NXT:    %b ";
+static const char *ng6 = "%t: ALUResult  %d ";
+static const char *ng7 = "%t: PC_NXT:    %d ";
 static const char *ng8 = "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v";
 static unsigned int ng9[] = {31U, 0U};
 static int ng10[] = {0, 0};

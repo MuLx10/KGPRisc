@@ -178,13 +178,13 @@ module G9Processor(clk);
 	 
 	 always @(clk) begin
 	   $strobe("\n\n");
-	   $strobe("%t: PC:        %b ", $time, pc);
+	   $strobe("%t: PC:        %d ", $time, pc);
 		$strobe("%t: IMem :     %b ", $time, instruction);
-		$strobe("%t: rs(%b):    %b ", $time,read_reg_1,reg_read_data_1);
-		$strobe("%t: rt(%b):    %b ", $time,read_reg_2,reg_read_data_2);
+		$strobe("%t: rs(%b):    %d ", $time,read_reg_1,reg_read_data_1);
+		$strobe("%t: rt(%b):    %d ", $time,read_reg_2,reg_read_data_2);
 		$strobe("%t: AluOp:     %b ", $time,AluOp);
-		$strobe("%t: ALUResult  %b ", $time, ALUResult);
-		$strobe("%t: PC_NXT:    %b ", $time,pc_next);
+		$strobe("%t: ALUResult  %d ", $time, ALUResult);
+		$strobe("%t: PC_NXT:    %d ", $time,pc_next);
 	 end
 	
 endmodule

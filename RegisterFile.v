@@ -43,7 +43,7 @@ module RegisterFile(clk,
 	 //reg [2:0] i;
 	 initial begin
 	  for(i=0;i<size;i=i+1)
-			RF[i] = i;
+			RF[i] = 32'b00000000000000000000000000000000;
 	 end
 	 always @(posedge clk)
 	 begin
