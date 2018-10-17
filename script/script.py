@@ -36,13 +36,17 @@ OPCODE['ret'] = "011111"
 get_bin = lambda x,n : ''.join(reversed( [str((x >> i) & 1) for i in range(n)] ) )
 
 registers = {}
-registers['rs'] = get_bin(0,5)
-registers['rt'] = get_bin(1,5)
-registers['ra'] = get_bin(31,5)
+registers['$zero'] = get_bin(0,5)
+registers['$rs'] = get_bin(1,5)
+registers['$rt'] = get_bin(2,5)
+registers['$ra'] = get_bin(31,5)
+registers['$sp'] = get_bin(30,5)
+for i in range(4):
+    registers['$a'+str(i)] = get_bin(2+i,5) 
+    registers['$v'+str(i)] = get_bin(6+i,5) 
 for i in range(8):
-    registers['a'+str(i)] = get_bin(2+i,5) 
-    registers['t'+str(i)] = get_bin(10+i,5) 
-    registers['s'+str(i)] = get_bin(18+i,5) 
+    registers['$t'+str(i)] = get_bin(10+i,5) 
+    registers['$s'+str(i)] = get_bin(18+i,5) 
 
 zero_16 = '0'*16
 zero_5  = '0'*5
@@ -58,9 +62,11 @@ fout = open('InstructionMemory.mif','w')
 instr_cnt = 0
 with open(filename,'r') as instrfile:
     while True:
-        line = instrfile.readline().strip(' ').strip('\n')
+        line = instrfile.readline().split('#')[0].strip(' ').strip('\n')
         if not line:
             break
+        if '#' in line[:3]:
+            continue
         line = line.split(' ')
         op = line[0]
         args = ' '.join(line[1:]).replace(' ','')
@@ -68,7 +74,15 @@ with open(filename,'r') as instrfile:
         if op in op1:
             rs = args.split(',')[0].strip(' ')
             rt = args.split(',')[1].strip(' ')
-            instr = OPCODE[op]+registers[rs]+registers[rt]+zero_16
+            if op in ['lw','sw']:
+                imm = rt.split('(')[0].strip(' ')
+                if not imm:
+                    imm = 0
+                rt = rt.split('(')[1].strip(' ').split(')')[0].strip(' ')
+                rs,rt = rt,rs
+                instr = OPCODE[op]+registers[rs]+registers[rt]+get_bin(int(imm),16)
+            else:
+                instr = OPCODE[op]+registers[rs]+registers[rt]+zero_16
 
         if op in op2:
             rs = args.split(',')[0].strip(' ')

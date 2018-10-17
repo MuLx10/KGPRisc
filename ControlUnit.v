@@ -85,12 +85,14 @@ module ControlUnit(
 				end
 		`SHLLV:
 				begin
+				   alu_src=1'b0;
 					alu_op = 3'b100;
 					reg_write = 1'b1;
 				end
 
 		`SHRLV:
 				begin
+				   alu_src=1'b0;
 					alu_op = 3'b101;
 					reg_write = 1'b1;
 				end
@@ -103,6 +105,7 @@ module ControlUnit(
 		`SHRAV:
 				begin
 					alu_op = 3'b110;
+					alu_src=1'b0;
 					reg_write = 1'b1;
 				end
 
@@ -111,6 +114,7 @@ module ControlUnit(
 						 alu_src = 1;
 						 mem_to_reg = 1;
 						 mem_read = 1;  
+						 alu_op = `Add;  
 					end
 	 `SW:  
 					begin
@@ -122,6 +126,7 @@ module ControlUnit(
 	 `aluAdd:  
 					begin
 						 reg_write = 1'b1;
+						 alu_src=1'b0;
 						 alu_op = `Add;
 					end
 	 `aluAddi:  
@@ -133,11 +138,12 @@ module ControlUnit(
 	 `aluComp:  
 					begin
 						 reg_write = 1'b1;
+						 alu_src=1'b0;
 						 alu_op = `Comp;  
 					end
 	 `aluCompi: 
 					begin
-						 alu_src = 1;
+						 alu_src = 1'b1;
 						 reg_write = 1'b1;
 						 alu_op = `Comp;
 					end
@@ -145,63 +151,66 @@ module ControlUnit(
 	 `logAnd:  
 					begin
 						 reg_write = 1'b1;
+						 alu_src=1'b0;
 						 alu_op = `And;   
 					end
 	 `logXor:  
 					begin
 						 reg_write = 1'b1;
+						 alu_src=1'b0;
 						 alu_op = `Xor;   
 					end
 		 
 		`b:
 			begin
 				b=1'b1;
-				alu_op=`Add;
+				alu_src=1'b1;
 			end
 		`br:
 			begin
 				br=1'b1;
+				alu_src=1'b1;
 				alu_op=`Add;
 			end
 		`bz:
 			begin
 				bz=1'b1;
-				alu_op=`Add;
+				alu_src=1'b1;
 			end
 		`bnz:
 			begin
 				bnz=1'b1;
-				alu_op=`Add;
+				alu_src=1'b1;
 			end
 		`bcy:
 			begin
 				bcy=1'b1;
-				alu_op=`Add;
+				alu_src=1'b1;
 			end
 		`bncy:
 			begin
 				bncy=1'b1;
-				alu_op=`Add;
+				alu_src=1'b1;
 			end
 		`bs:
 			begin
 				bs=1'b1;
-				alu_op=`Add;
+				alu_src=1'b1;
 			end
 		`bns:
 			begin
 				bns=1'b1;
-				alu_op=`Add;
+				alu_src=1'b1;
 			end
 		`bv:
 			begin
 				bv=1'b1;
-				alu_op=`Add;
+				alu_src=1'b1;
 			end
 		`bnv:
 			begin
 				bnv=1'b1;
-				alu_op=`Add;
+				alu_src=1'b1;
 			end
 		`Call:
 			begin

@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_isim_beh.exe -prj /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_beh.prj work.G9_TB work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_isim_beh.exe" -prj "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_beh.prj" "G9_TB" "work.glbl" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -16,8 +16,8 @@ Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into li
 Starting static elaboration
 WARNING:HDLCompiler:189 - "/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v" Line 79: Size mismatch in connection of port <addra>. Formal port size is 10-bit while actual signal size is 32-bit.
 Completed static elaboration
-Fuse Memory Usage: 96920 KB
-Fuse CPU Usage: 1720 ms
+Fuse Memory Usage: 96912 KB
+Fuse CPU Usage: 1770 ms
 Compiling module ProgramCounter
 Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
 Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
@@ -33,9 +33,9 @@ Compiling module G9Processor
 Compiling module G9_TB
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 6 sub-compilation(s) to finish...
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 14 Verilog Units
 Built simulation executable /home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB_isim_beh.exe
-Fuse Memory Usage: 660476 KB
-Fuse CPU Usage: 1870 ms
-GCC CPU Usage: 3380 ms
+Fuse Memory Usage: 660820 KB
+Fuse CPU Usage: 1840 ms
+GCC CPU Usage: 410 ms

@@ -43,6 +43,11 @@ module ArithmeticLogicUnit(
 
 	always @(*)
 	begin
+		zflag = 0;
+		overflowflag 	= 0;
+		carryflag = 0;
+		signflag = 0;
+		ALUResult = 0;
 		case (alu_control)
 			3'b000: // Signed add
 				begin
@@ -61,7 +66,7 @@ module ArithmeticLogicUnit(
 				
 			3'b001: // Comp
 				begin
-					{carryflag,ALUResult} = ~operand0 + 1;
+					{carryflag,ALUResult} = ~operand1 + 1;
 					overflowflag = 0;
 					zflag = (ALUResult == 0) ? 1 : 0;
 					carryflag = 0;
@@ -115,13 +120,14 @@ module ArithmeticLogicUnit(
 					ALUResult = 0;
 				end				
 		endcase
-		if ((operand0<0 && operand0>operand1)||(operand1<0 && operand1>operand0))
+		//if ((operand0<0 && operand0>operand1)||(operand1<0 && operand1>operand0))
+		if (ALUResult[31] | overflowflag)
 			signflag = 1;
 		else
 			signflag = 0;
+
+		$strobe("%t: ALU  FLAGS ALUop:  %b", $time,alu_control);
+		$strobe("%t: zflag  %b overflowflag %b ", $time, zflag, overflowflag);
+		$strobe("%t: signflag  %b carryflag %b ", $time, signflag, carryflag);
 	end
-	/*always @(*) begin
-		$strobe("%t: ALUResult  %b  %d ", $time, ALUResult, ALUResult);
-		$strobe("%t: ALUOP  %b  %d ", $time, alu_control, alu_control);
-	end*/
  endmodule

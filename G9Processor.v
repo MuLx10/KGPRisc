@@ -156,16 +156,11 @@ module G9Processor(clk);
 	 assign pc_b = (b == 1'b1)?pc_branch:pc_bnv;
 	 assign pc_br = (br == 1'b1)?reg_read_data_1:pc_b;
 	 
+	 assign pc_next = (Ret)?reg_read_data_1:pc_br;
+	 
 	 assign branch = b | br | bz | bnz | bcy | bncy | bs | bns | bv | bnv | Ret ;
 	 
-	 /*RegisterFile RF_ClRt(.clk(clk),
-					 .reg_write(Call),
-					 .read_reg_1(RA),.read_reg_2(RA),
-					 .write_register(RA),
-					 .write_data(pc_4),
-					 .read_data_1(RA_data),.read_data_2(temp));*/
-				 
-	 assign pc_next = (Ret)?reg_read_data_1:pc_br;
+	
 	 	
 	 DataMemory DMem (
 		.clk(clk), 

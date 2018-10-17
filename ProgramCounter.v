@@ -33,7 +33,7 @@ module ProgramCounter(clk, reset,branch, pc_next, pc);
 		pc = -1;
 	end
 
-	always @(negedge clk)
+	always @(posedge clk)
 	begin
 		if (reset)
 			pc = -1;
@@ -41,5 +41,9 @@ module ProgramCounter(clk, reset,branch, pc_next, pc);
 			pc = pc_next;
 		else
 			pc = pc+1;
+	end
+	always @(clk)
+	begin
+		$strobe("%t: PC: %d, PC_NXT: %d, BRANCH %d ", $time, pc,pc_next,branch);
 	end
 endmodule
