@@ -57,11 +57,11 @@ module RegisterFile(clk,
 
 		//$strobe("%t: Read Values1 RF(%d)  %b ", $time, read_reg_1, read_data_1);
 		//$strobe("%t: Read Values2 RF(%d)  %b ", $time, read_reg_2, read_data_2);
-	 always @(clk)
+	 /*always @(clk)
 	 begin
 		$strobe("%t: RF(%d)  %b ", $time,0, RF[0]);
 		$strobe("%t: RF(%d)  %b ", $time,1, RF[1]);
 		$strobe("%t: RF(%d)  %b ", $time,2, RF[2]);
 		$strobe("%t: RF(%d)  %b \n\n", $time,31, RF[31]);
-	 end
+	 end*/
 endmodule

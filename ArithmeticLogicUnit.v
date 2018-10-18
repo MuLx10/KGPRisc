@@ -114,11 +114,11 @@ module ArithmeticLogicUnit(
 		else
 			signflag = 0;
 
-		$strobe("%t: ALU  ALUop:  %b", $time,alu_control);
+		/*$strobe("%t: ALU  ALUop:  %b", $time,alu_control);
 		$strobe("%t: ALU  operand0:  %d", $time,operand0);
 		$strobe("%t: ALU  operand1:  %d", $time,operand1);
 		$strobe("%t: ALU  Res:  %d", $time,ALUResult);
 		$strobe("%t: zflag  %b overflowflag %b ", $time, zflag, overflowflag);
-		$strobe("%t: signflag  %b carryflag %b ", $time, signflag, carryflag);
+		$strobe("%t: signflag  %b carryflag %b ", $time, signflag, carryflag);*/
 	end
  endmodule

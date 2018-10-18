@@ -70,8 +70,8 @@ module ControlUnit(
 	begin
 	 mem_read=0;mem_write=0;alu_src=0;mem_to_reg=0;reg_write=0;b=0;br=0;bz=0;bnz=0;bcy=0;bncy=0;bs=0;bns=0;bv=0;bnv=0;Call=0;Ret=0;
 	 alu_op = `None;
-	 $strobe("%t: opcode:  %b ", $time,opcode);
-	 $strobe("%t: instr   %b", $time,instruction);
+	 /*$strobe("%t: opcode:  %b ", $time,opcode);
+	 $strobe("%t: instr   %b", $time,instruction);*/
 	 case(instruction[31:26])
 		`SHLL:
 				begin
