@@ -1,9 +1,9 @@
 xor $s0,$s0
 xor $s1,$s1
 xor $s2,$s2
-addi $s0,12
+addi $s0,45
 addi $s1,43
-addi $s2,45
+addi $s2,12
 xor $a1,$a1
 sw $s0, 0($a1) #store elems
 sw $s1, 1($a1)
@@ -34,3 +34,6 @@ addi $a1,2
 lw $v0, 0($a1) #load result elems
 lw $v1, 1($a1)
 lw $v2, 2($a1)
+add $v0,$zero
+add $v1,$zero
+add $v2,$zero
