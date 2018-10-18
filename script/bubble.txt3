@@ -2,8 +2,8 @@ xor $s0,$s0
 xor $s1,$s1
 xor $s2,$s2
 addi $s0,45
-addi $s1,43
-addi $s2,12
+addi $s1,12
+addi $s2,43
 xor $a1,$a1
 sw $s0, 0($a1) #store elems
 sw $s1, 1($a1)
