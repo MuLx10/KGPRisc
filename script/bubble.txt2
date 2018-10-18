@@ -39,4 +39,12 @@ add $t0,$zero
 bns -15
 add $t1,$zero
 bnz -20
-b 1
+addi $a1,-8
+sw $s0, 0($a1) #load result elems
+sw $s1, 1($a1)
+sw $s2, 2($a1)
+sw $s3, 3($a1)
+sw $s4, 4($a1)
+sw $s5, 5($a1)
+sw $s6, 6($a1)
+sw $s7, 7($a1)
