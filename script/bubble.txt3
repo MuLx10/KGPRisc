@@ -1,37 +1,47 @@
+xor $a0,$a0
 xor $s0,$s0
 xor $s1,$s1
 xor $s2,$s2
-addi $s0,45
-addi $s1,12
-addi $s2,43
+addi $s0,2
+addi $s1,78
+addi $s2,25
 xor $a1,$a1
-sw $s0, 0($a1) #store elems
+sw $s0, 0($a1)             # store elems in mem
 sw $s1, 1($a1)
 sw $s2, 2($a1)
-compi $a1,2 # pt to base addrs
-xor $t0,$t0 # Outer 0
+## function  params ##
+addi $a0,2                 # num of elemts - 1 
+xor $a1,$a1                # base address of array in mem
+######################
+# BUBBLE SORT Starts #
+######################
+comp $s1,$a0               
+xor $t0,$t0                # OUTER LOOP Begins
+add $t0,$a1                # ptr to base address
 xor $t1,$t1
-add $t0,$zero # Inner
+add $t0,$zero              # INNER LOOP Begins
 lw $t2, 1($t0) 
 lw $t3, 0($t0)
 xor $t4,$t4
 add $t4,$t2
 comp $t5,$t3
 add $t4,$t5
-bns 4 # branch No_swap
+bns 4                      # branch NO_SWAP
 sw $t2, 0($t0)
 sw $t3, 1($t0)
 xor $t1,$t1
 addi $t1,1
-addi $t0,1 # No_swap
+addi $t0,1                 # NO_SWAP
 xor $t6,$t6
 add $t6,$t0
-add $t6,$a1
-bs -17 #branch Inner
+add $t6,$s1
+bs -17                     # branch INNER LOOP
 add $t1,$zero
-bnz -21  #branch Outer
-addi $a1,2
-lw $v0, 0($a1) #load result elems
+bnz -22                    # branch OUTER LOOP
+####################
+# BUBBLE SORT Ends #
+####################
+lw $v0, 0($a1)             #load result elems
 lw $v1, 1($a1)
 lw $v2, 2($a1)
 add $v0,$zero

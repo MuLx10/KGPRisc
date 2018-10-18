@@ -62,12 +62,12 @@ fout = open('InstructionMemory.mif','w')
 instr_cnt = 0
 with open(filename,'r') as instrfile:
     while True:
-        line = instrfile.readline().split('#')[0].strip(' ').strip('\n')
+        line = instrfile.readline()
         if not line:
             break
         if '#' in line[:3]:
             continue
-        line = line.split(' ')
+        line = line.split('#')[0].strip(' ').strip('\n').split(' ')
         op = line[0]
         args = ' '.join(line[1:]).replace(' ','')
 

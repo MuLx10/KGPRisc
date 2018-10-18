@@ -173,7 +173,7 @@ module G9Processor(clk);
 	 assign write_datai = (mem_to_reg == 1)?  read_data: ALUResult;
 	 assign write_data = (Call)?pc_4:write_datai;
 	 
-	 always @(clk) begin
+	 always @(negedge clk) begin
 	   $strobe("\n\n");
 	   $strobe("%t: PC:        %d ", $time, pc);
 		$strobe("%t: IMem :     %b ", $time, instruction);
