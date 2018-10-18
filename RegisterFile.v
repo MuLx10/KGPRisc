@@ -48,7 +48,7 @@ module RegisterFile(clk,
 	  for(i=0;i<size;i=i+1)
 			RF[i] = 32'b00000000000000000000000000000000;
 	 end
-	 always @(negedge clk)
+	 always @(posedge clk)
 	 begin
 		if(reg_write) 
 		   RF[write_register] <= write_data;

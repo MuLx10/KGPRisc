@@ -27,11 +27,9 @@ addi $t0,1 # No_swap
 xor $t6,$t6
 add $t6,$t0
 add $t6,$a1
-bz -17 #branch Inner
-add $t6,$zero
-bs -19 #branch Inner
+bs -17 #branch Inner
 add $t1,$zero
-bnz -23  #branch Outer
+bnz -21  #branch Outer
 addi $a1,2
 lw $v0, 0($a1) #load result elems
 lw $v1, 1($a1)
