@@ -60,17 +60,19 @@
 `define None 3'b111
 
 module ControlUnit(
-      input[5:0] opcode,
+      input[31:0] instruction,
       output reg[2:0] alu_op,
       output reg mem_read,mem_write,alu_src,mem_to_reg,reg_write,
 			b,br,bz,bnz,bcy,bncy,bs,bns,bv,bnv,Call,Ret);
-
-	always @(*)
+			
+   assign opcode = instruction[31:26];
+	always @(instruction)
 	begin
 	 mem_read=0;mem_write=0;alu_src=0;mem_to_reg=0;reg_write=0;b=0;br=0;bz=0;bnz=0;bcy=0;bncy=0;bs=0;bns=0;bv=0;bnv=0;Call=0;Ret=0;
 	 alu_op = `None;
-	 
-	 case(opcode)
+	 $strobe("%t: opcode:  %b ", $time,opcode);
+	 $strobe("%t: instr   %b", $time,instruction);
+	 case(instruction[31:26])
 		`SHLL:
 				begin
 					alu_src=1'b1;

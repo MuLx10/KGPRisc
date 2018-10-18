@@ -2,9 +2,9 @@ Command line:
    G9_TB_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  48111
+     -socket  56177
 
-Wed Oct 17 21:29:46 2018
+Thu Oct 18 11:39:00 2018
 
 
- Elaboration Time: 0.03 sec
+ Elaboration Time: 0.02 sec

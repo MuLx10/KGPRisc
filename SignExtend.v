@@ -18,9 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module SignExtend(input [15:0] imm16, output reg [31:0] imm32);
-	 always @( * ) 
-	 begin
-			imm32[31:0] = { {16{imm16[15]}},imm16[15:0] };
-	 end
+module SignExtend(input [15:0] imm16, output  [31:0] imm32);
+
+	assign imm32[31:0] = { {16{imm16[15]}},imm16[15:0] };
+
 endmodule

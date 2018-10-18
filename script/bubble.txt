@@ -1,42 +1,16 @@
-xor $s0,$s0
-addi $s0,12
-addi $s1,43
-addi $s2,11
-addi $s3,5
-addi $s4,1
-addi $s5,87
-addi $s6,15
-addi $s7,35
+addi $s0,87
+addi $s1,17
 xor $a1,$a1
-xor $a0,$a0
-addi $a0,8
 sw $s0, 0($a1) #store elems
 sw $s1, 1($a1)
-sw $s2, 2($a1)
-sw $s3, 3($a1)
-sw $s4, 4($a1)
-sw $s5, 5($a1)
-sw $s6, 6($a1)
-sw $s7, 7($a1)
-addi $a1,8 # pt to base addrs
-compi $t0,2 # Outer n-2
-add $t0,$a1
-xor $t1,$t1
-lw $t2, 1($t0) # Inner
-lw $t3, 0($t0)
-xor $t4,$t4
-add $t4,$t2
-comp $t5,$t3
-add $t4,$t5
-bns 4
-sw $t2, 0($t0)
-sw $t3, 1($t0)
-xor $t1,$t1
-addi $t1,1
-addi $t0,-1 # No_swap
-bz -13
-add $t0,$zero
-bns -15
+lw $t1, 1($a1) # small
+lw $t2, 0($a1) # large
+xor $t3,$t3
+add $t3,$t1
+comp $t4,$t2
+add $t3,$t4
+bns 2
+sw $t1, 0($a1)
+sw $t2, 1($a1)
 add $t1,$zero
-bnz -20
-b 1
+add $t2,$zero

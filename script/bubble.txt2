@@ -34,9 +34,9 @@ sw $t3, 1($t0)
 xor $t1,$t1
 addi $t1,1
 addi $t0,-1 # No_swap
-bz -12
+bz -13
 add $t0,$zero
-bns -16
+bns -15
 add $t1,$zero
 bnz -20
 b 1

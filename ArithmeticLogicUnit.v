@@ -43,11 +43,6 @@ module ArithmeticLogicUnit(
 
 	always @(*)
 	begin
-		zflag = 0;
-		overflowflag 	= 0;
-		carryflag = 0;
-		signflag = 0;
-		ALUResult = 0;
 		case (alu_control)
 			3'b000: // Signed add
 				begin
@@ -111,14 +106,7 @@ module ArithmeticLogicUnit(
 					zflag = (ALUResult == 0) ? 1 : 0;
 				end
 
-			default:
-				begin
-					zflag = 0;
-					overflowflag 	= 0;
-					carryflag = 0;
-					signflag = 0;
-					ALUResult = 0;
-				end				
+				
 		endcase
 		//if ((operand0<0 && operand0>operand1)||(operand1<0 && operand1>operand0))
 		if (ALUResult[31] | overflowflag)
@@ -126,7 +114,10 @@ module ArithmeticLogicUnit(
 		else
 			signflag = 0;
 
-		$strobe("%t: ALU  FLAGS ALUop:  %b", $time,alu_control);
+		$strobe("%t: ALU  ALUop:  %b", $time,alu_control);
+		$strobe("%t: ALU  operand0:  %d", $time,operand0);
+		$strobe("%t: ALU  operand1:  %d", $time,operand1);
+		$strobe("%t: ALU  Res:  %d", $time,ALUResult);
 		$strobe("%t: zflag  %b overflowflag %b ", $time, zflag, overflowflag);
 		$strobe("%t: signflag  %b carryflag %b ", $time, signflag, carryflag);
 	end

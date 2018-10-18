@@ -19,22 +19,20 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module InstructionMemory(clka, wea, addra, dina, douta);
-	parameter	size=32, MemSize=32;
+	parameter	size=32, MemSize=1024;
 	input		clka,wea;
 	input	[size-1:0]	addra;
 	input	[size-1:0]	dina;
-	output reg[size-1:0]	douta;
-	reg	[size-1:0]	IMem[0:MemSize-1];
-   integer i;
-	initial
+	output [size-1:0]	douta;
+	reg	[size-1:0]	IMem[0:MemSize-1];	initial
 	begin
-		//$readmemb ("Imem.data", Imem);
-		 for(i=0; i<MemSize; i=i+1)
+		$readmemb ("InstructionMemory.mif", IMem);
+		 /*for(i=0; i<MemSize; i=i+1)
             IMem[i] = 32'b0000000000000000000000000000000;
 				
 		 IMem[1] = 32'b00100100010000110000000000000011; //Sw
 		 IMem[2] = 32'b00100000010000010000000000000011; //LW
-		 IMem[3] = 32'b00000000010000010000000000000011;
+		 IMem[3] = 32'b00000000010000010000000000000011;*/
 		 //IMem[1]	= 32'b00111000001000110000000000000000; //shllv
 		 //IMem[2]	= 32'b00110000001000000000000000000011; //shll	
        //IMem[3]	= 32'b00110100001000000000000000000011; //shrl			 
@@ -44,9 +42,8 @@ module InstructionMemory(clka, wea, addra, dina, douta);
 		 //IMem[7] = 32'b01111100000111110000000000000000; //Ret
 	end
 	
-	always @(clka) 
-	begin
-		  douta = IMem[addra];
-	end
+
+	assign  douta = IMem[addra];
+
 
 endmodule

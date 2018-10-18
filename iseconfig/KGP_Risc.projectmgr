@@ -15,13 +15,13 @@
          <ClosedNode>/PC_TB |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|G9Processor|PC_TB.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>G9Processor (/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v)</SelectedItem>
+         <SelectedItem>IMem - InstructionMemory (/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/InstructionMemory.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000019a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000019a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>G9Processor (/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9Processor.v)</CurrentItem>
+      <CurrentItem>IMem - InstructionMemory (/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/InstructionMemory.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -74,7 +74,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e50000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -89,8 +89,6 @@
          <ClosedNode>/DMem_TB |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|KGP_Risc|DMem_TB.v</ClosedNode>
          <ClosedNode>/G9Processor |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|G9Processor|G9Processor.v</ClosedNode>
          <ClosedNode>/G9_TB |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|G9Processor|G9_TB.v</ClosedNode>
-         <ClosedNode>/G9_TB |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|KGP_Risc|G9_TB.v</ClosedNode>
-         <ClosedNode>/G9_TB |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|KGP_Risc|G9_TB.v/uut - G9Processor</ClosedNode>
          <ClosedNode>/G9_TB |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|KGP_Risc|G9_TB.v/uut - G9Processor/IMem - InstructionMemory</ClosedNode>
          <ClosedNode>/IMem_TB |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|G9Processor|IMem_TB.v</ClosedNode>
          <ClosedNode>/IMem_TB |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|KGP_Risc|IMem_TB.v</ClosedNode>
@@ -98,13 +96,13 @@
          <ClosedNode>/PC_TB |home|nirala|Documents|grive|codes|Autumn2018|5thSem|COA|Spartan|KGP_Risc|PC_TB.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>G9_TB (/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB.v)</SelectedItem>
+         <SelectedItem>PC - ProgramCounter (/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ProgramCounter.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >4</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000e2000000020000000000000000000000000200000064ffffffff000000810000000300000002000000e20000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ae000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ae0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>G9_TB (/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/G9_TB.v)</CurrentItem>
+      <CurrentItem>PC - ProgramCounter (/home/nirala/Documents/grive/codes/Autumn2018/5thSem/COA/Spartan/KGP_Risc/ProgramCounter.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -125,14 +123,14 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff00000000000000020000014c0000011d01000000060100000002</SourceProcessView>
+   <SourceProcessView>000000ff0000000000000002000001230000008601000000060100000002</SourceProcessView>
    <CurrentView>Behavioral Simulation</CurrentView>
 </Project>

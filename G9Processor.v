@@ -94,9 +94,9 @@ module G9Processor(clk);
 		instr=instruction;
 	end
 	/////*/
-	assign OpCode = instruction[31:26];//opp
+	//opp
 	
-	ControlUnit CU(OpCode, AluOp,
+	ControlUnit CU(instruction, AluOp,
 						mem_read,mem_write,alu_src,mem_to_reg,reg_write,
 						b,br,bz,bnz,bcy,bncy,bs,bns,bv,bnv,Call,Ret);
 						
