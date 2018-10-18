@@ -1,33 +1,38 @@
 xor $s0,$s0
 xor $s1,$s1
-addi $s0,43
-addi $s1,12
+xor $s2,$s2
+addi $s0,12
+addi $s1,43
+addi $s2,45
 xor $a1,$a1
-xor $a0,$a0
-addi $a0,2
 sw $s0, 0($a1) #store elems
 sw $s1, 1($a1)
-addi $a1,2 # pt to base addrs
-compi $t0,2 # Outer n-2
-add $t0,$a1
+sw $s2, 2($a1)
+compi $a1,2 # pt to base addrs
+xor $t0,$t0 # Outer 0
 xor $t1,$t1
-lw $t2, 1($t0) # Inner
+add $t0,$zero # Inner
+lw $t2, 1($t0) 
 lw $t3, 0($t0)
 xor $t4,$t4
 add $t4,$t2
 comp $t5,$t3
 add $t4,$t5
-bns 4
+bns 4 # branch No_swap
 sw $t2, 0($t0)
 sw $t3, 1($t0)
 xor $t1,$t1
 addi $t1,1
-addi $t0,-1 # No_swap
-bz -13
-add $t0,$zero
-bns -15
+addi $t0,1 # No_swap
+xor $t6,$t6
+add $t6,$t0
+add $t6,$a1
+bz -17 #branch Inner
+add $t6,$zero
+bs -19 #branch Inner
 add $t1,$zero
-bnz -20
-addi $a1,-2
-lw $s0, 0($a1) #load result elems
-lw $s1, 1($a1)
+bnz -23  #branch Outer
+addi $a1,2
+lw $v0, 0($a1) #load result elems
+lw $v1, 1($a1)
+lw $v2, 2($a1)
