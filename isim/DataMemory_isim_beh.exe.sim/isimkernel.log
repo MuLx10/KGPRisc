@@ -2,12 +2,12 @@ Command line:
    DataMemory_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  51919
+     -socket  52019
 
-Fri Oct 19 13:14:13 2018
+Fri Oct 19 13:18:50 2018
 
 
- Elaboration Time: 0.06 sec
+ Elaboration Time: 0.02 sec
 
  Current Memory Usage: 196.927 Meg
 
@@ -21,9 +21,9 @@ Fri Oct 19 13:14:13 2018
  Total Scalar Nets and Variables : 33056
 Total Line Count : 22
 
- Total Simulation Time: 0.08 sec
+ Total Simulation Time: 0.03 sec
 
  Current Memory Usage: 272.429 Meg
 
-Fri Oct 19 13:14:19 2018
+Fri Oct 19 13:18:54 2018
 
