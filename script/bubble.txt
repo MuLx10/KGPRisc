@@ -1,39 +1,13 @@
-xor $s0,$s0
-xor $s1,$s1
-xor $s2,$s2
-xor $s3,$s3
-xor $s4,$s4
-xor $s5,$s5
-xor $s6,$s6
-xor $s7,$s7
-## Elements of array
-addi $s0,2
-addi $s1,78
-addi $s2,25
-addi $s3,11
-addi $s4,96
-addi $s5,15
-addi $s6,45
-addi $s7,10
-xor $a1,$a1
-sw $s0, 0($a1)             # store elems in mem
-sw $s1, 1($a1)
-sw $s2, 2($a1)
-sw $s3, 3($a1)
-sw $s4, 4($a1)
-sw $s5, 5($a1)
-sw $s6, 6($a1)
-sw $s7, 7($a1)
 ## function  params ##
-xor $a0,$a0
-addi $a0,7                 # num of elemts - 1 
-xor $a1,$a1                # base address of array in mem
+xor $a1,$a1                
+lw $a0, 0($a1)             # num of elemts
+addi $a1,1                 # base address of array in mem
 ######################
 # BUBBLE SORT Starts #
 ######################
 comp $s1,$a0               
 xor $t0,$t0                # OUTER LOOP Begins
-add $t0,$a1                # ptr to base address
+add $t0,$a1                # ptr to base address of array
 xor $t1,$t1
 add $t0,$zero              # INNER LOOP Begins
 lw $t2, 1($t0) 
