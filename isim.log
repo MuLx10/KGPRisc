@@ -12767,3 +12767,4 @@ Finished circuit initialization process.
            231000000: AluOp:  111, branch:  0
            231000000: ALUResult           0 
            231000000: PC_NXT:            56 
+# exit 0
