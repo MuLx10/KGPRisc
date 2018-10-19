@@ -2,9 +2,9 @@ Command line:
    DataMemory_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52019
+     -socket  34527
 
-Fri Oct 19 13:18:50 2018
+Fri Oct 19 13:32:16 2018
 
 
  Elaboration Time: 0.02 sec
@@ -25,5 +25,5 @@ Total Line Count : 22
 
  Current Memory Usage: 272.429 Meg
 
-Fri Oct 19 13:18:54 2018
+Fri Oct 19 13:32:22 2018
 
