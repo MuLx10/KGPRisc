@@ -1,0 +1,686 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: G9Processor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "G9Processor.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "G9Processor"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-pq208
+
+---- Source Options
+Top Module Name                    : G9Processor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "SignExtend.v" in library work
+Compiling verilog file "RegisterFile.v" in library work
+Module <SignExtend> compiled
+Compiling verilog file "ProgramCounter.v" in library work
+Module <RegisterFile> compiled
+Compiling verilog file "InstructionMemoryi.v" in library work
+Module <ProgramCounter> compiled
+Compiling verilog file "DataMemory.v" in library work
+Module <InstructionMemoryi> compiled
+Compiling verilog file "ControlUnit.v" in library work
+Module <DataMemory> compiled
+Compiling verilog file "ArithmeticLogicUnit.v" in library work
+Module <ControlUnit> compiled
+Compiling verilog file "G9Processor.v" in library work
+Module <ArithmeticLogicUnit> compiled
+Module <G9Processor> compiled
+No errors in compilation
+Analysis of file <"G9Processor.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <G9Processor> in library <work> with parameters.
+	MemSize = "00000000000000000000001000000000"
+	RegFileSize = "00000000000000000000000000000101"
+	hsize = "00000000000000000000000000010000"
+	opsize = "00000000000000000000000000000110"
+	size = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <ProgramCounter> in library <work> with parameters.
+	size = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <InstructionMemoryi> in library <work> with parameters.
+	MemSize = "00000000000000000000000010000000"
+	size = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <SignExtend> in library <work>.
+
+Analyzing hierarchy for module <ControlUnit> in library <work>.
+
+Analyzing hierarchy for module <RegisterFile> in library <work> with parameters.
+	led_register = "00000000000000000000000000011001"
+	size = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <ArithmeticLogicUnit> in library <work> with parameters.
+	aluCSize = "00000000000000000000000000000011"
+	size = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <DataMemory> in library <work> with parameters.
+	MemSize = "00000000000000000000000000100000"
+	size = "00000000000000000000000000100000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <G9Processor>.
+	MemSize = 32'sb00000000000000000000001000000000
+	RegFileSize = 32'sb00000000000000000000000000000101
+	hsize = 32'sb00000000000000000000000000010000
+	opsize = 32'sb00000000000000000000000000000110
+	size = 32'sb00000000000000000000000000100000
+Module <G9Processor> is correct for synthesis.
+ 
+Analyzing module <ProgramCounter> in library <work>.
+	size = 32'sb00000000000000000000000000100000
+Module <ProgramCounter> is correct for synthesis.
+ 
+Analyzing module <InstructionMemoryi> in library <work>.
+	MemSize = 32'sb00000000000000000000000010000000
+	size = 32'sb00000000000000000000000000100000
+INFO:Xst:1607 - Contents of array <IMem> may be accessed with an index that does not cover the full array size.
+Module <InstructionMemoryi> is correct for synthesis.
+ 
+Analyzing module <SignExtend> in library <work>.
+Module <SignExtend> is correct for synthesis.
+ 
+Analyzing module <ControlUnit> in library <work>.
+Module <ControlUnit> is correct for synthesis.
+ 
+Analyzing module <RegisterFile> in library <work>.
+	led_register = 32'sb00000000000000000000000000011001
+	size = 32'sb00000000000000000000000000100000
+Module <RegisterFile> is correct for synthesis.
+ 
+Analyzing module <ArithmeticLogicUnit> in library <work>.
+	aluCSize = 32'sb00000000000000000000000000000011
+	size = 32'sb00000000000000000000000000100000
+Module <ArithmeticLogicUnit> is correct for synthesis.
+ 
+Analyzing module <DataMemory> in library <work>.
+	MemSize = 32'sb00000000000000000000000000100000
+	size = 32'sb00000000000000000000000000100000
+INFO:Xst:1607 - Contents of array <DMem> may be accessed with an index that does not cover the full array size.
+Module <DataMemory> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <i> in unit <RegisterFile> has a constant value of 100000 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <ProgramCounter>.
+    Related source file is "ProgramCounter.v".
+    Found 32-bit register for signal <pc>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <ProgramCounter> synthesized.
+
+
+Synthesizing Unit <InstructionMemoryi>.
+    Related source file is "InstructionMemoryi.v".
+WARNING:Xst:647 - Input <rsta> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clka> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <addra<31:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <IMem<32:127>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+    Found 128x32-bit ROM for signal <douta>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <InstructionMemoryi> synthesized.
+
+
+Synthesizing Unit <SignExtend>.
+    Related source file is "SignExtend.v".
+Unit <SignExtend> synthesized.
+
+
+Synthesizing Unit <ControlUnit>.
+    Related source file is "ControlUnit.v".
+WARNING:Xst:647 - Input <instruction<25:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <opcode> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32x4-bit ROM for signal <$rom0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <ControlUnit> synthesized.
+
+
+Synthesizing Unit <RegisterFile>.
+    Related source file is "RegisterFile.v".
+WARNING:Xst:1872 - Variable <j> is used but never assigned.
+    Found 32-bit 32-to-1 multiplexer for signal <read_data_1>.
+    Found 32-bit 32-to-1 multiplexer for signal <read_data_2>.
+    Found 1024-bit register for signal <RF>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_0$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_1$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_10$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_11$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_12$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_13$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_14$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_15$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_16$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_17$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_18$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_19$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_2$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_20$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_21$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_22$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_23$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_24$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_25$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_26$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_27$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_28$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_29$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_3$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_30$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_31$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_4$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_5$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_6$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_7$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_8$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <RF_9$mux0000>.
+INFO:Xst:738 - HDL ADVISOR - 1024 flip-flops were inferred for signal <RF>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred 1088 Multiplexer(s).
+Unit <RegisterFile> synthesized.
+
+
+Synthesizing Unit <ArithmeticLogicUnit>.
+    Related source file is "ArithmeticLogicUnit.v".
+WARNING:Xst:737 - Found 32-bit latch for signal <$old_ALUResult_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <$old_overflowflag_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <carryflag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <zflag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 32-bit adder carry out for signal <AUX_2$addsub0000>.
+    Found 1-bit 7-to-1 multiplexer for signal <carryflag$mux0000>.
+    Found 32-bit shifter logical left for signal <old_ALUResult_6$shift0000>.
+    Found 32-bit shifter logical right for signal <old_ALUResult_7$shift0000>.
+    Found 32-bit 7-to-1 multiplexer for signal <old_ALUResult_8$mux0000>.
+    Found 32-bit comparator greatequal for signal <old_overflowflag_9$cmp_ge0000> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_overflowflag_9$cmp_ge0001> created at line 50.
+    Found 32-bit comparator greatequal for signal <old_overflowflag_9$cmp_ge0002> created at line 50.
+    Found 1-bit 7-to-1 multiplexer for signal <old_overflowflag_9$mux0000>.
+    Found 1-bit 7-to-1 multiplexer for signal <zflag$mux0001>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  35 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <ArithmeticLogicUnit> synthesized.
+
+
+Synthesizing Unit <DataMemory>.
+    Related source file is "DataMemory.v".
+WARNING:Xst:647 - Input <address<31:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_read> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 33-to-1 multiplexer for signal <read_data>.
+    Found 1056-bit register for signal <DMem>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_0$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_1$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_10$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_2$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_3$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_4$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_5$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_6$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_7$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_8$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <DMem_9$mux0000>.
+INFO:Xst:738 - HDL ADVISOR - 1056 flip-flops were inferred for signal <DMem>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 1056 D-type flip-flop(s).
+	inferred 384 Multiplexer(s).
+Unit <DataMemory> synthesized.
+
+
+Synthesizing Unit <G9Processor>.
+    Related source file is "G9Processor.v".
+WARNING:Xst:1780 - Signal <temp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <address> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <RA_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <OpCode> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit adder for signal <pc_4>.
+    Found 32-bit adder for signal <pc_branch_target$addsub0000> created at line 124.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <G9Processor> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 128x32-bit ROM                                        : 1
+ 32x4-bit ROM                                          : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 32-bit adder carry out                                : 1
+ 33-bit adder                                          : 1
+# Registers                                            : 66
+ 32-bit register                                       : 66
+# Latches                                              : 4
+ 1-bit latch                                           : 3
+ 32-bit latch                                          : 1
+# Comparators                                          : 3
+ 32-bit comparator greatequal                          : 3
+# Multiplexers                                         : 50
+ 1-bit 7-to-1 multiplexer                              : 3
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 33-to-1 multiplexer                            : 1
+ 32-bit 4-to-1 multiplexer                             : 43
+ 32-bit 7-to-1 multiplexer                             : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 128x32-bit ROM                                        : 1
+ 32x4-bit ROM                                          : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit adder carry out                                : 1
+# Registers                                            : 2112
+ Flip-Flops                                            : 2112
+# Latches                                              : 4
+ 1-bit latch                                           : 3
+ 32-bit latch                                          : 1
+# Multiplexers                                         : 112
+ 1-bit 32-to-1 multiplexer                             : 64
+ 1-bit 7-to-1 multiplexer                              : 3
+ 32-bit 33-to-1 multiplexer                            : 1
+ 32-bit 4-to-1 multiplexer                             : 43
+ 32-bit 7-to-1 multiplexer                             : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <_old_overflowflag_9> (without init value) has a constant value of 0 in block <ArithmeticLogicUnit>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <G9Processor> ...
+
+Optimizing unit <ProgramCounter> ...
+
+Optimizing unit <RegisterFile> ...
+
+Optimizing unit <DataMemory> ...
+
+Optimizing unit <ArithmeticLogicUnit> ...
+WARNING:Xst:2677 - Node <PC/pc_31> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_30> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_29> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_28> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_27> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_26> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_25> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_24> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_23> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_22> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_21> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_20> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_19> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_18> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_17> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_16> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_15> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_14> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_13> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_12> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_11> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_10> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_9> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_8> of sequential type is unconnected in block <G9Processor>.
+WARNING:Xst:2677 - Node <PC/pc_7> of sequential type is unconnected in block <G9Processor>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block G9Processor, actual ratio is 60.
+FlipFlop PC/pc_0 has been replicated 2 time(s)
+FlipFlop PC/pc_1 has been replicated 1 time(s)
+FlipFlop PC/pc_2 has been replicated 2 time(s)
+FlipFlop PC/pc_3 has been replicated 2 time(s)
+FlipFlop PC/pc_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2095
+ Flip-Flops                                            : 2095
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : G9Processor.ngr
+Top Level Output File Name         : G9Processor
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 34
+
+Cell Usage :
+# BELS                             : 5689
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 6
+#      LUT2                        : 63
+#      LUT2_D                      : 2
+#      LUT2_L                      : 3
+#      LUT3                        : 1943
+#      LUT3_D                      : 34
+#      LUT3_L                      : 31
+#      LUT4                        : 1743
+#      LUT4_D                      : 86
+#      LUT4_L                      : 20
+#      MUXCY                       : 114
+#      MUXF5                       : 891
+#      MUXF6                       : 384
+#      MUXF7                       : 192
+#      MUXF8                       : 96
+#      VCC                         : 1
+#      XORCY                       : 78
+# FlipFlops/Latches                : 2129
+#      FDE                         : 2080
+#      FDR                         : 15
+#      LD_1                        : 34
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 33
+#      IBUF                        : 1
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-5 
+
+ Number of Slices:                     2249  out of   3584    62%  
+ Number of Slice Flip Flops:           2129  out of   7168    29%  
+ Number of 4 input LUTs:               3932  out of   7168    54%  
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    141    24%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------+---------------------------------+-------+
+Clock Signal                                                      | Clock buffer(FF name)           | Load  |
+------------------------------------------------------------------+---------------------------------+-------+
+clk                                                               | BUFGP                           | 2095  |
+ALU/old_ALUResult_8_cmp_eq00001(ALU/old_ALUResult_8_cmp_eq00001:O)| BUFG(*)(ALU/_old_ALUResult_8_31)| 34    |
+------------------------------------------------------------------+---------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 12.410ns (Maximum Frequency: 80.582MHz)
+   Minimum input arrival time before clock: 5.290ns
+   Maximum output required time after clock: 6.306ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 12.410ns (frequency: 80.582MHz)
+  Total number of paths / destination ports: 1361540 / 4175
+-------------------------------------------------------------------------
+Delay:               12.410ns (Levels of Logic = 9)
+  Source:            PC/pc_6 (FF)
+  Destination:       PC/pc_6 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PC/pc_6 to PC/pc_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             18   0.626   1.374  PC/pc_6 (PC/pc_6)
+     LUT2_D:I1->O         14   0.479   1.032  IMem/Mrom_douta112111 (N111)
+     LUT4:I3->O           22   0.479   1.530  IMem/Mrom_douta6712 (instruction<27>)
+     LUT4_L:I1->LO         1   0.479   0.123  read_reg_1<1>1_SW0 (N690)
+     LUT4:I3->O          256   0.479   2.666  read_reg_1<1>1 (read_reg_1<1>)
+     MUXF5:S->O            1   0.540   0.000  RF/mux57_5_f5 (RF/mux57_5_f5)
+     MUXF6:I1->O           1   0.298   0.000  RF/mux57_4_f6 (RF/mux57_4_f6)
+     MUXF7:I1->O           1   0.298   0.000  RF/mux57_3_f7 (RF/mux57_3_f7)
+     MUXF8:I1->O          13   0.298   1.053  RF/mux57_2_f8 (reg_read_data_1<3>)
+     LUT3:I2->O            3   0.479   0.000  PC/pc_mux0000<3> (PC/pc_mux0000<3>)
+     FDR:D                     0.176          PC/pc_3
+    ----------------------------------------
+    Total                     12.410ns (4.631ns logic, 7.779ns route)
+                                       (37.3% logic, 62.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1391 / 1391
+-------------------------------------------------------------------------
+Offset:              5.290ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       RF/RF_31_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to RF/RF_31_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            58   0.715   1.997  reset_IBUF (reset_IBUF)
+     LUT4:I0->O           32   0.479   1.575  RF/RF_9_not00011 (RF/RF_9_not0001)
+     FDE:CE                    0.524          RF/RF_9_0
+    ----------------------------------------
+    Total                      5.290ns (1.718ns logic, 3.572ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              6.306ns (Levels of Logic = 1)
+  Source:            RF/RF_25_31 (FF)
+  Destination:       led_output<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: RF/RF_25_31 to led_output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.626   0.771  RF/RF_25_31 (RF/RF_25_31)
+     OBUF:I->O                 4.909          led_output_31_OBUF (led_output<31>)
+    ----------------------------------------
+    Total                      6.306ns (5.535ns logic, 0.771ns route)
+                                       (87.8% logic, 12.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 42.00 secs
+Total CPU time to Xst completion: 41.40 secs
+ 
+--> 
+
+
+Total memory usage is 577048 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   43 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

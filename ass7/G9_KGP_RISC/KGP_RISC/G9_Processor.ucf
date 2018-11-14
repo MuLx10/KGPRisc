@@ -1,0 +1,79 @@
+
+# Generated IO constraints 
+
+
+
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "reset" IOSTANDARD = LVCMOS33;
+
+NET "led_output[31]" IOSTANDARD = LVCMOS33;
+NET "led_output[30]" IOSTANDARD = LVCMOS33;
+NET "led_output[29]" IOSTANDARD = LVCMOS33;
+NET "led_output[28]" IOSTANDARD = LVCMOS33;
+NET "led_output[27]" IOSTANDARD = LVCMOS33;
+NET "led_output[26]" IOSTANDARD = LVCMOS33;
+NET "led_output[25]" IOSTANDARD = LVCMOS33;
+NET "led_output[24]" IOSTANDARD = LVCMOS33;
+NET "led_output[23]" IOSTANDARD = LVCMOS33;
+NET "led_output[22]" IOSTANDARD = LVCMOS33;
+NET "led_output[21]" IOSTANDARD = LVCMOS33;
+NET "led_output[20]" IOSTANDARD = LVCMOS33;
+NET "led_output[19]" IOSTANDARD = LVCMOS33;
+NET "led_output[18]" IOSTANDARD = LVCMOS33;
+NET "led_output[17]" IOSTANDARD = LVCMOS33;
+NET "led_output[16]" IOSTANDARD = LVCMOS33;
+NET "led_output[15]" IOSTANDARD = LVCMOS33;
+NET "led_output[14]" IOSTANDARD = LVCMOS33;
+NET "led_output[13]" IOSTANDARD = LVCMOS33;
+NET "led_output[12]" IOSTANDARD = LVCMOS33;
+NET "led_output[11]" IOSTANDARD = LVCMOS33;
+NET "led_output[10]" IOSTANDARD = LVCMOS33;
+NET "led_output[9]" IOSTANDARD = LVCMOS33;
+NET "led_output[8]" IOSTANDARD = LVCMOS33;
+NET "led_output[7]" IOSTANDARD = LVCMOS33;
+NET "led_output[6]" IOSTANDARD = LVCMOS33;
+NET "led_output[5]" IOSTANDARD = LVCMOS33;
+NET "led_output[4]" IOSTANDARD = LVCMOS33;
+NET "led_output[3]" IOSTANDARD = LVCMOS33;
+NET "led_output[2]" IOSTANDARD = LVCMOS33;
+NET "led_output[1]" IOSTANDARD = LVCMOS33;
+NET "led_output[0]" IOSTANDARD = LVCMOS33;
+
+
+# Generated physical constraints 
+
+NET "led_output[0]" LOC = P139;
+NET "led_output[1]" LOC = P140;
+NET "led_output[2]" LOC = P137;
+NET "led_output[3]" LOC = P138;
+NET "led_output[4]" LOC = P133;
+NET "led_output[5]" LOC = P135;
+NET "led_output[6]" LOC = P131;
+NET "led_output[7]" LOC = P132;
+NET "led_output[8]" LOC = P149;
+NET "led_output[9]" LOC = P150;
+NET "led_output[10]" LOC = P147;
+NET "led_output[11]" LOC = P148;
+NET "led_output[12]" LOC = P144;
+NET "led_output[13]" LOC = P146;
+NET "led_output[14]" LOC = P141;
+NET "led_output[15]" LOC = P143;
+NET "led_output[0]" LOC = P181;
+NET "led_output[1]" LOC = P176;
+NET "led_output[2]" LOC = P172;
+NET "led_output[3]" LOC = P175;
+NET "led_output[4]" LOC = P169;
+NET "led_output[5]" LOC = P168;
+NET "led_output[6]" LOC = P167;
+NET "led_output[7]" LOC = P171;
+NET "led_output[8]" LOC = P165;
+NET "led_output[9]" LOC = P166;
+NET "led_output[10]" LOC = P161;
+NET "led_output[11]" LOC = P162;
+NET "led_output[12]" LOC = P155;
+NET "led_output[13]" LOC = P156;
+NET "led_output[14]" LOC = P152;
+NET "led_output[15]" LOC = P154; 
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "clk" LOC = P18;
+NET "reset" LOC = P16;

@@ -1,0 +1,17 @@
+# Output products list for <InstructionMemory>
+InstructionMemory/blk_mem_gen_v7_3_readme.txt
+InstructionMemory/doc/blk_mem_gen_v7_3_vinfo.html
+InstructionMemory/doc/pg058-blk-mem-gen.pdf
+InstructionMemory.asy
+InstructionMemory.gise
+InstructionMemory.mif
+InstructionMemory.ngc
+InstructionMemory.sym
+InstructionMemory.v
+InstructionMemory.veo
+InstructionMemory.xco
+InstructionMemory.xise
+InstructionMemory_flist.txt
+InstructionMemory_xmdf.tcl
+_xmsgs/pn_parser.xmsgs
+summary.log

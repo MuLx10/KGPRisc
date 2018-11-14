@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Downloads/New folder/KGP_RISC/G9_Processor_TB_isim_beh.exe" -prj "C:/Downloads/New folder/KGP_RISC/G9_Processor_TB_beh.prj" "work.G9_Processor_TB" "work.glbl" 
